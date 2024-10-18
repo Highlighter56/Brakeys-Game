@@ -1,0 +1,99 @@
+[gd_scene load_steps=13 format=3 uid="uid://cvubdk8qkyf10"]
+
+[ext_resource type="Script" path="res://scripts/button.gd" id="1_0tdem"]
+[ext_resource type="Texture2D" uid="uid://dcwf8dc0kmoc1" path="res://assests/sprites/Button.png" id="1_sd5su"]
+[ext_resource type="AudioStream" uid="uid://cfxpfi68qu74k" path="res://assests/sounds/tap.wav" id="3_6f1rt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xe4c"]
+atlas = ExtResource("1_sd5su")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bkkgc"]
+atlas = ExtResource("1_sd5su")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5tdnx"]
+atlas = ExtResource("1_sd5su")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e68or"]
+atlas = ExtResource("1_sd5su")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtw3q"]
+atlas = ExtResource("1_sd5su")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psh0d"]
+atlas = ExtResource("1_sd5su")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yj71o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0xe4c")
+}],
+"loop": true,
+"name": &"Default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bkkgc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5tdnx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e68or")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jtw3q")
+}],
+"loop": true,
+"name": &"Pressed1",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_psh0d")
+}],
+"loop": true,
+"name": &"Pressed2",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_inswb"]
+radius = 7.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bkqdo"]
+radius = 7.0
+
+[node name="Button" type="StaticBody2D"]
+script = ExtResource("1_0tdem")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -8)
+sprite_frames = SubResource("SpriteFrames_yj71o")
+animation = &"Default"
+frame_progress = 0.892538
+
+[node name="ButtonHitbox" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+rotation = 1.5708
+shape = SubResource("CircleShape2D_inswb")
+
+[node name="DetectionZone" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionZone"]
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_bkqdo")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_6f1rt")
+bus = &"Effects"
+
+[connection signal="body_entered" from="DetectionZone" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="DetectionZone" to="." method="_on_detection_zone_body_exited"]

@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://drvrybxqoacqs"]
+
+[ext_resource type="Script" path="res://scripts/sign_3.gd" id="1_8tx6r"]
+[ext_resource type="Texture2D" uid="uid://c8gr8lcqewgtf" path="res://assests/sprites/world_tileset.png" id="2_fft1h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nruyj"]
+size = Vector2(44, 46)
+
+[sub_resource type="Animation" id="Animation_flrfs"]
+resource_name = "Display Text"
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_isldg"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vi6yd"]
+_data = {
+"Display Text": SubResource("Animation_flrfs"),
+"RESET": SubResource("Animation_isldg")
+}
+
+[node name="Sign3" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_8tx6r")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 31)
+texture = ExtResource("2_fft1h")
+region_enabled = true
+region_rect = Rect2(128, 64, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 16)
+scale = Vector2(2, 1)
+shape = SubResource("RectangleShape2D_nruyj")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vi6yd")
+}
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

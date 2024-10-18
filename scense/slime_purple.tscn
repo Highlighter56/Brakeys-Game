@@ -1,0 +1,66 @@
+[gd_scene load_steps=10 format=3 uid="uid://cnnrdyce0sddj"]
+
+[ext_resource type="Texture2D" uid="uid://cg3nrlrti4ayx" path="res://assests/sprites/slime_purple.png" id="1_alt7c"]
+[ext_resource type="Script" path="res://scripts/slime_purple.gd" id="1_k1wra"]
+[ext_resource type="PackedScene" uid="uid://dw6lfl6tnugud" path="res://scense/killzone.tscn" id="2_xsehs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ukxn"]
+atlas = ExtResource("1_alt7c")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1b2l8"]
+atlas = ExtResource("1_alt7c")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pco0n"]
+atlas = ExtResource("1_alt7c")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sfqaa"]
+atlas = ExtResource("1_alt7c")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jxp8u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ukxn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1b2l8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pco0n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sfqaa")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4nwsf"]
+size = Vector2(10, 12)
+
+[node name="slime_purple" type="Node2D"]
+position = Vector2(0, -6)
+script = ExtResource("1_k1wra")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jxp8u")
+autoplay = "default"
+
+[node name="Killzone" parent="." instance=ExtResource("2_xsehs")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_4nwsf")
+
+[node name="DownRight" type="RayCast2D" parent="."]
+position = Vector2(8, 0)
+target_position = Vector2(0, 13)
+
+[node name="DownLeft" type="RayCast2D" parent="."]
+position = Vector2(-8, 0)
+target_position = Vector2(0, 13)

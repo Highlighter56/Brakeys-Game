@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=3 uid="uid://dns31yyg8uw5f"]
+
+[ext_resource type="FontFile" uid="uid://bc61wi8n6vb0i" path="res://assests/fonts/PixelOperator8.ttf" id="1_x8bad"]
+
+[node name="Things To Add" type="Node"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 561.0
+offset_bottom = 596.0
+theme_override_fonts/font = ExtResource("1_x8bad")
+text = "Things To Add:
+ - Utilize the Remaining/Unused Assest 
+ ... Improve on the Initial assests and import more
+ - UI
+   - Main/Start Menu
+   - Options Menu
+   - Customizable Key Binds
+   - Adjustable Sounds
+ - End Goal
+   () Auto Count the number of coins
+   () Goal: Door
+   () Indication that the door is what you interacting with
+   () Make shake the screan when you cant open the door but try to
+   () Error Sound when not complete
+   () Effect when all coins are collected
+   - Make an input delay instead of an animation delay and error delay
+   - Lock / Key
+   () Have the coins automaticly be counted
+   - Once you have all the coins, you unlock a key
+   - take the key to the door to unlock it and win the level
+ - Player
+   () Death
+     () Sound
+     () Animation
+     () Controls Disable when dead, but physics continues
+   - Attack
+   - Roll
+   - Jumping
+     () Sound Effect
+     - Coyote Jumping
+     - Jump Queue
+     - Variable Height 
+    - Wall Jumping
+   () Improved Animation
+ - Enemies
+   () Detects Ledges
+   - Way to Kill Them
+   - Detect Both Floor and Walls
+   () Purple Slime
+ () Signs
+   () When next to, text appears
+ () Buttons
+ () Button Blocks"

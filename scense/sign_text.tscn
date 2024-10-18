@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://tbt34fl4nj2k"]
+
+[ext_resource type="FontFile" uid="uid://bc61wi8n6vb0i" path="res://assests/fonts/PixelOperator8.ttf" id="1_rec3j"]
+
+[node name="Sign Text" type="Label"]
+offset_left = -44.0
+offset_top = -66.0
+offset_right = 44.0
+offset_bottom = 22.0
+theme_override_fonts/font = ExtResource("1_rec3j")
+theme_override_font_sizes/font_size = 8
+text = "Testing
+Testing
+Testing"
+horizontal_alignment = 1
+vertical_alignment = 2
+autowrap_mode = 2

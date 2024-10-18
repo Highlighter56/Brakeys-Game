@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnwv15ekyo7yf"]
+
+[ext_resource type="AudioStream" uid="uid://b1kp26w4o6xdm" path="res://assests/music/time_for_adventure.mp3" id="1_momuw"]
+[ext_resource type="FontFile" uid="uid://djj151oji6302" path="res://assests/fonts/PixelOperator8-Bold.ttf" id="2_0x6rr"]
+
+[node name="music" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_momuw")
+autoplay = true
+bus = &"Music"
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = 26.0
+offset_top = 16.0
+offset_right = 933.0
+offset_bottom = 268.0
+theme_override_fonts/font = ExtResource("2_0x6rr")
+theme_override_font_sizes/font_size = 24
+text = "Music has been added as an Auto Load. This is a scene/script that will prosist throughout the entire game, no matter which scene is loaded. This is the reason the music plays, consistnelty when the player dies, and why you dont see any audio nodes in any levels. 
+
+To make something an autoload go to Project > Project Settigns > Autoload : then click on the file icon in the top middle and select the file you want to be auto loaded"
+autowrap_mode = 2

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7bv13oxkyk7x"]
+
+[ext_resource type="Texture2D" uid="uid://g1ryoqkpbnsk" path="res://assests/sprites/platforms.png" id="1_vor8w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e1357"]
+size = Vector2(14, 8)
+
+[node name="Platform Frost" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_vor8w")
+region_enabled = true
+region_rect = Rect2(0, 48, 16, 9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_e1357")
+one_way_collision = true

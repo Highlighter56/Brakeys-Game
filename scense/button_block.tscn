@@ -1,0 +1,154 @@
+[gd_scene load_steps=16 format=3 uid="uid://cut62fnhggbx5"]
+
+[ext_resource type="Texture2D" uid="uid://btyqfuqqwy1i4" path="res://assests/sprites/ButtonBlock.png" id="1_ln8b0"]
+[ext_resource type="Script" path="res://scripts/button_block.gd" id="1_rnlt7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5p3n1"]
+atlas = ExtResource("1_ln8b0")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ulgkp"]
+atlas = ExtResource("1_ln8b0")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nifok"]
+atlas = ExtResource("1_ln8b0")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8yapf"]
+atlas = ExtResource("1_ln8b0")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0wswt"]
+atlas = ExtResource("1_ln8b0")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ie205"]
+atlas = ExtResource("1_ln8b0")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5vn3"]
+atlas = ExtResource("1_ln8b0")
+region = Rect2(48, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bc2ou"]
+atlas = ExtResource("1_ln8b0")
+region = Rect2(64, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_khlyn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5p3n1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ulgkp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nifok")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8yapf")
+}],
+"loop": true,
+"name": &"Style1",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0wswt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ie205")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5vn3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bc2ou")
+}],
+"loop": true,
+"name": &"Style2",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u132t"]
+size = Vector2(14, 14)
+
+[sub_resource type="Animation" id="Animation_4268l"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_d7up1"]
+resource_name = "Triggered"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lkgm2"]
+_data = {
+"RESET": SubResource("Animation_4268l"),
+"Triggered": SubResource("Animation_d7up1")
+}
+
+[node name="ButtonBlock" type="StaticBody2D"]
+script = ExtResource("1_rnlt7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_khlyn")
+animation = &"Style2"
+autoplay = "Style2"
+frame_progress = 0.475075
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_u132t")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_lkgm2")
+}
