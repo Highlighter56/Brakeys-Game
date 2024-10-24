@@ -24,28 +24,29 @@ func hasDied():
 func _ready():
 	pass
 
-
 # Gets called every frame
 func _process(delta):
-	# State Machine - I dont know if this is actualy what a state machine is, but
+	# State Machine 
+	#- I dont know if this is actualy what a state machine is, but
 	# my State Machine is used to keep track of what state the player is in. I put 
 	# this here instead of in the _physics_process because I want to leave that for 
 	# physics, and this should be being called more frequently anyways, so this will 
 	# work
-	if(isDead):
-		currentState = state.DEAD
-	elif(is_on_floor()):
-		if(direction==0):
-			currentState = state.IDLE
+	if(!isDead):
+		if(!is_on_floor()):
+			if(velocity.y >= 0):
+				currentState = state.FALLING
+				if(is_on_wall() and direction != 0):
+					currentState = state.SLIDING
+			else:
+				currentState = state.JUMPING
 		else:
-			currentState = state.RUNNING
+			if(direction == 0):
+				currentState = state.IDLE
+			else:
+				currentState = state.RUNNING
 	else:
-		if(Input.is_action_just_pressed("jump")):
-			currentState = state.JUMPING
-		if(velocity.y>0):
-			currentState = state.FALLING
-			if(is_on_wall()):
-				currentState = state.SLIDING
+		currentState = state.DEAD
 	#print(currentState)
 
 
@@ -55,28 +56,40 @@ func _physics_process(delta):
 	#print("Current:" + str(currentState))
 	match currentState:
 		state.DEAD:
-			print("State: Dead")
+			print("State: DEAD")
+			
 		state.IDLE:
 			print("State: IDLE")
+			
 		state.RUNNING:
 			print("State: RUNNING")
+			
 		state.JUMPING:
 			print("State: JUMPING")
+			
+			velocity.y += gravity * delta
 		state.SLIDING:
 			print("State: SLIDING")
+			
+			#if(velocity.y>50):
+			velocity.y=50
 		state.FALLING:
 			print("State: FALLING")
+			
+			velocity.y += gravity * delta
 	
-	
-	# Add Gravity
+	# This line might need to stay here for starting the game not touching ground
+	# Add Gravity: 
 	if(not is_on_floor()):
-		velocity.y += gravity * delta
+		#velocity.y += gravity * delta
+		pass
 	
 	# Handles SLiding
 	if((not is_on_floor()) and is_on_wall() and velocity.y>0 and direction!=0):
 		# Sets max fall speed when sliding
-		if(velocity.y>50):
-			velocity.y=50
+		#if(velocity.y>50):
+			#velocity.y=50
+		pass
 	
 	# Handles Jumps
 	if(Input.is_action_just_pressed("jump") and is_on_floor()):

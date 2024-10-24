@@ -2,6 +2,10 @@ The Read me File will be used as a log
 
 -----Branch: playerStateMachine-----
 
+Commit 2: Move Player Code into the appropriate states to organize
+No2 that the State Machine exist, Im going to move as much player code into its proper section as possible
+
+Commit 1: Create the State Machine
 switch statments dont exist in Godot, instead they have mathc, which function similarly
 
 
