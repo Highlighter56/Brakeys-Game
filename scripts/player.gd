@@ -56,68 +56,52 @@ func _physics_process(delta):
 	#print("Current:" + str(currentState))
 	match currentState:
 		state.DEAD:
-			print("State: DEAD")
+			#print("State: DEAD")
+			animated_sprite_2d.play("die")
+			velocity.y += gravity * delta
+			if(position.y>256):
+				velocity.x=0
+			velocity.x = move_toward(velocity.x, 0, 1)
 			
 		state.IDLE:
-			print("State: IDLE")
+			#print("State: IDLE")
+			animated_sprite_2d.play("idle")
 			
 		state.RUNNING:
-			print("State: RUNNING")
+			#print("State: RUNNING")
+			animated_sprite_2d.play("run")
 			
 		state.JUMPING:
-			print("State: JUMPING")
-			
+			#print("State: JUMPING")
 			velocity.y += gravity * delta
+			animated_sprite_2d.play("jump")
+			
 		state.SLIDING:
-			print("State: SLIDING")
-			
-			#if(velocity.y>50):
+			#print("State: SLIDING")
 			velocity.y=50
-		state.FALLING:
-			print("State: FALLING")
 			
+		state.FALLING:
+			#print("State: FALLING")
 			velocity.y += gravity * delta
 	
-	# This line might need to stay here for starting the game not touching ground
-	# Add Gravity: 
-	if(not is_on_floor()):
-		#velocity.y += gravity * delta
-		pass
-	
-	# Handles SLiding
-	if((not is_on_floor()) and is_on_wall() and velocity.y>0 and direction!=0):
-		# Sets max fall speed when sliding
-		#if(velocity.y>50):
-			#velocity.y=50
-		pass
-	
-	# Handles Jumps
-	if(Input.is_action_just_pressed("jump") and is_on_floor()):
-		jump.play()
-		velocity.y = JUMP_VELOCITY
-
+	# Handles Direction
 	# get_axis("Negative Value", "Positive Value")
 	# Gets the input direction
 	direction = Input.get_axis("move_left", "move_right")
 	
-	# If the player is NOT dead
+	# Handles Jumps
+	if(Input.is_action_just_pressed("jump")):
+		if(currentState==state.IDLE or currentState==state.RUNNING or currentState==state.SLIDING):
+			jump.play()
+			velocity.y = JUMP_VELOCITY
+	
+	# Handles Player Controls and Disables Controls when Dead
 	if(!isDead):
-		#print(position.y)
-		
 		# Flips Direction of Character
 		if(direction>0):
 			animated_sprite_2d.flip_h = false
 		elif(direction<0):
 			animated_sprite_2d.flip_h = true
-		
-		# Animations
-		if(is_on_floor()):
-			if(direction==0):
-				animated_sprite_2d.play("idle")
-			else:
-				animated_sprite_2d.play("run")
-		else:
-			animated_sprite_2d.play("jump")
 		
 		# Applys Movment / Sets Velocity
 		if(direction):
@@ -125,12 +109,6 @@ func _physics_process(delta):
 		else:
 # move_towards(From, To, Delta) : will add/subtract delta to from in the direction to reach to
 			velocity.x = move_toward(velocity.x, 0, SPEED)
-	
-	# If the player IS dead
-	else:
-		animated_sprite_2d.play("die")
-		if(position.y>256):
-			velocity.x=0
-	
+		
 # move_and_slide() moves the node based on its set velocity
 	move_and_slide()
