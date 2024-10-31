@@ -5,7 +5,7 @@ extends Node2D
 @onready var ray_cast_left = $RayCast_Left
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
-const SPEED = 60
+@export var SPEED = 60
 var direction = 1
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

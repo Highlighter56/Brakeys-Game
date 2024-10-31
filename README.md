@@ -1,7 +1,22 @@
 The Read me File will be used as a log
 
------Branch: playerStateMachine-----
+----Branch: creatingLevelTwo---
 
+Goal: 
+
+Goal: Polishing up
+    Make the Tileset fancy and add some backgrounding
+    add detial to the map, like objects, coins,...
+
+Goal: Create a functional level 2
+- What should Level 2 look like?
+    What is End Goal? - To Reach the End!!!
+        collect coins?
+        reach the end?
+    Implemented upsidown button
+    Need to make there camera have a max lag time between the player so the falling section works
+
+-----Branch: playerStateMachine-----
 
 Commit 2: Move Player Code into the appropriate states to organize
 Now that the State Machine exist, Im going to move as much player code into its proper section as possible

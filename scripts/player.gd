@@ -20,7 +20,6 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func hasDied():
 	isDead = true
 
-
 func _ready():
 	pass
 

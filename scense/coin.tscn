@@ -206,6 +206,7 @@ script = ExtResource("1_7uio8")
 visible = false
 sprite_frames = SubResource("SpriteFrames_11a33")
 autoplay = "default"
+frame_progress = 0.633762
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_unf3s")
@@ -215,6 +216,7 @@ disabled = true
 libraries = {
 "": SubResource("AnimationLibrary_351l4")
 }
+autoplay = "RESET"
 
 [node name="collect_sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_e8lx3")

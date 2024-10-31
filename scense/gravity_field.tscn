@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcudmf5w82qhx"]
+
+[ext_resource type="Script" path="res://scripts/gravity_field.gd" id="1_rr58s"]
+
+[node name="Gravity_Field" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_rr58s")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
