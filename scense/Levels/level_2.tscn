@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://brcqrum3tusvt"]
+[gd_scene load_steps=32 format=3 uid="uid://brcqrum3tusvt"]
 
 [ext_resource type="Script" path="res://scripts/game_manager2.gd" id="1_3udcy"]
 [ext_resource type="PackedScene" uid="uid://g6dmb1eb2kqm" path="res://scense/player.tscn" id="1_oi7ex"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://d4g075fhb8c42" path="res://assests/sprites/world_tileset2.png" id="2_oneaj"]
 [ext_resource type="Texture2D" uid="uid://c8kluhlc0tlu1" path="res://assests/sprites/world_tileset_3.1.png" id="3_p3ah8"]
 [ext_resource type="PackedScene" uid="uid://b4dhpg5ny0rfs" path="res://scense/purpleOrb.tscn" id="4_gkfle"]
+[ext_resource type="Script" path="res://scripts/camera2D_2.gd" id="4_nvqus"]
 [ext_resource type="PackedScene" uid="uid://dw6lfl6tnugud" path="res://scense/killzone.tscn" id="5_wwmso"]
 [ext_resource type="PackedScene" uid="uid://d1hicetwqhaqr" path="res://scense/bat.tscn" id="6_qt5lh"]
 [ext_resource type="PackedScene" uid="uid://cy0ae7706shh7" path="res://scense/platform_frost_long.tscn" id="8_ulaft"]
@@ -1068,6 +1069,7 @@ zoom = Vector2(4, 4)
 limit_bottom = 100
 limit_smoothed = true
 position_smoothing_enabled = true
+script = ExtResource("4_nvqus")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_npfpl")
@@ -1326,3 +1328,6 @@ source_path = NodePath("../Button")
 [node name="ButtonBlock7" parent="Folder_ButtonsANDBlocks/GroupOne" instance=ExtResource("14_6hlua")]
 position = Vector2(-904, -1065)
 source_path = NodePath("../Button")
+
+[connection signal="body_entered" from="GameManager/Gravity_Field" to="Player/Camera2D" method="_on_gravity_field_body_entered"]
+[connection signal="body_exited" from="GameManager/Gravity_Field" to="Player/Camera2D" method="_on_gravity_field_body_exited"]

@@ -15,6 +15,7 @@ enum state {DEAD, IDLE, RUNNING, JUMPING, SLIDING, FALLING}
 var currentState
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+var maxFallSpeed = 400
 
 
 func hasDied():
@@ -72,8 +73,8 @@ func _physics_process(delta):
 			
 		state.JUMPING:
 			#print("State: JUMPING")
-			velocity.y += gravity * delta
 			animated_sprite_2d.play("jump")
+			velocity.y += gravity * delta
 			
 		state.SLIDING:
 			#print("State: SLIDING")
@@ -81,7 +82,11 @@ func _physics_process(delta):
 			
 		state.FALLING:
 			#print("State: FALLING")
+			animated_sprite_2d.play("jump")
 			velocity.y += gravity * delta
+			if(velocity.y>=maxFallSpeed):
+				velocity.y=maxFallSpeed
+			#print(velocity.y)
 	
 	# Handles Direction
 	# get_axis("Negative Value", "Positive Value")

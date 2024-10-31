@@ -2,11 +2,7 @@ The Read me File will be used as a log
 
 ----Branch: creatingLevelTwo---
 
-Goal: 
-
-Goal: Polishing up
-    Make the Tileset fancy and add some backgrounding
-    add detial to the map, like objects, coins,...
+Goal: Create a sliding and fallimg animation for player, along with dust particles when sliding
 
 Goal: Create a functional level 2
 - What should Level 2 look like?
@@ -15,6 +11,16 @@ Goal: Create a functional level 2
         reach the end?
     Implemented upsidown button
     Need to make there camera have a max lag time between the player so the falling section works
+
+    ---Branch: maxFallSpeed---
+    Goal: create a group of functions and variables that can be 
+    used to set the max speed the player can fall
+        var maxFallSpeed
+        func setMaxFallSpeed
+
+Goal: Polishing up
+    Make the Tileset fancy and add some backgrounding
+    add detial to the map, like objects, coins,...
 
 -----Branch: playerStateMachine-----
 
