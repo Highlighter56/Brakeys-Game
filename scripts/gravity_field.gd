@@ -3,7 +3,7 @@ extends Area2D
 @onready var player = %Player
 
 @onready var PLAYER_MAX_FALL_SPEED = player.maxFallSpeed
-@export var FIELD_MAX_FALL_SPEED = 200
+@export var FIELD_MAX_FALL_SPEED = 100
 #var PROJECT_GRAVITY = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _on_body_entered(body):

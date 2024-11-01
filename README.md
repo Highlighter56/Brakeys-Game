@@ -17,6 +17,8 @@ Goal: Create a functional level 2
     used to set the max speed the player can fall
         var maxFallSpeed
         func setMaxFallSpeed
+    
+    The map is generaly done, but I need to make the door work. Ill probalby create a new branch. Simplify the door, and add a ending animation
 
 Goal: Polishing up
     Make the Tileset fancy and add some backgrounding
