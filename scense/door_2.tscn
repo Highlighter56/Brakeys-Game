@@ -1,0 +1,289 @@
+[gd_scene load_steps=32 format=3 uid="uid://b52lf2hnmw3w2"]
+
+[ext_resource type="Script" path="res://scripts/door_2.gd" id="1_kvdsq"]
+[ext_resource type="Texture2D" uid="uid://ec30ugv00s74" path="res://assests/sprites/Door.png" id="1_t81bs"]
+[ext_resource type="AudioStream" uid="uid://dcbcgr6d3vwy2" path="res://assests/sounds/Door_Close.mp3" id="2_jcb0m"]
+[ext_resource type="AudioStream" uid="uid://mdt53gnkc2qq" path="res://assests/sounds/Door_Open.mp3" id="3_diwoc"]
+[ext_resource type="AudioStream" uid="uid://dqavgy5gq0wjn" path="res://assests/sounds/error.mp3" id="4_inrli"]
+[ext_resource type="AudioStream" uid="uid://cfxpfi68qu74k" path="res://assests/sounds/tap.wav" id="5_5vs1o"]
+
+[sub_resource type="Animation" id="Animation_ublak"]
+resource_name = "Close_Door_Animation"
+length = 1.5
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"animation_close_door"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sound_close_door:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_e54nf"]
+resource_name = "Open_Door_Animation"
+length = 1.75
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"animation_open_door"
+}]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sound_open_door:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_mmf7h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sound_close_door:playing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sound_open_door:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ggxuw"]
+_data = {
+"Close_Door_Animation": SubResource("Animation_ublak"),
+"Open_Door_Animation": SubResource("Animation_e54nf"),
+"RESET": SubResource("Animation_mmf7h")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_des86"]
+atlas = ExtResource("1_t81bs")
+region = Rect2(32, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pjbbe"]
+atlas = ExtResource("1_t81bs")
+region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kewuy"]
+atlas = ExtResource("1_t81bs")
+region = Rect2(128, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_toh7b"]
+atlas = ExtResource("1_t81bs")
+region = Rect2(96, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jau8i"]
+atlas = ExtResource("1_t81bs")
+region = Rect2(32, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofsox"]
+atlas = ExtResource("1_t81bs")
+region = Rect2(0, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1q66r"]
+atlas = ExtResource("1_t81bs")
+region = Rect2(128, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_41nbc"]
+atlas = ExtResource("1_t81bs")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aqwel"]
+atlas = ExtResource("1_t81bs")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ceri7"]
+atlas = ExtResource("1_t81bs")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qpeah"]
+atlas = ExtResource("1_t81bs")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7jpns"]
+atlas = ExtResource("1_t81bs")
+region = Rect2(128, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rw56s"]
+atlas = ExtResource("1_t81bs")
+region = Rect2(0, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1jbu"]
+atlas = ExtResource("1_t81bs")
+region = Rect2(32, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yw6xf"]
+atlas = ExtResource("1_t81bs")
+region = Rect2(64, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ul26k"]
+atlas = ExtResource("1_t81bs")
+region = Rect2(96, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5df4m"]
+atlas = ExtResource("1_t81bs")
+region = Rect2(128, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_evcwc"]
+atlas = ExtResource("1_t81bs")
+region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hgw5y"]
+atlas = ExtResource("1_t81bs")
+region = Rect2(32, 160, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5mytv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_des86")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pjbbe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kewuy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_toh7b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jau8i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofsox")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1q66r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_41nbc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aqwel")
+}],
+"loop": false,
+"name": &"close_door",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ceri7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qpeah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7jpns")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rw56s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1jbu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yw6xf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ul26k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5df4m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_evcwc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hgw5y")
+}],
+"loop": false,
+"name": &"open_door",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_logf1"]
+size = Vector2(54, 32)
+
+[node name="Door2" type="Node2D"]
+script = ExtResource("1_kvdsq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ggxuw")
+}
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_5mytv")
+animation = &"open_door"
+
+[node name="sound_close_door" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_jcb0m")
+bus = &"Effects"
+
+[node name="sound_open_door" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_diwoc")
+bus = &"Effects"
+
+[node name="error" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_inrli")
+bus = &"Effects"
+
+[node name="tap" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_5vs1o")
+bus = &"Player"
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_logf1")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

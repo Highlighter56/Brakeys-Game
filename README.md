@@ -18,7 +18,28 @@ Goal: Create a functional level 2
         var maxFallSpeed
         func setMaxFallSpeed
     
+    ---Branch: winAnimation---
     The map is generaly done, but I need to make the door work. Ill probalby create a new branch. Simplify the door, and add a ending animation
+    The Door in level 1 works so that after the fire works go off, you can open the door. In level 2, Ill have the fire works
+    go off once you reach the end platform
+    Door Animation Idea. Interact with door, once door opens, player walks over to door. Hide Player. Door Closing Annimation
+    TODO:
+        - Sounds
+            timing
+            error sound?
+            tap sound
+        ()add the area 2d
+        ()add the coloration
+        make player walk through door
+            () Player Controls need to be disabled
+                () add a variable on the jump and movment handeling
+                () set this variable to true through game manager script
+                () have each level have a different game manager script
+                   each game managers script controls the win condition for that level
+                    level 1: collect all the coins
+                    level 2: reach the end
+                    level 3: 
+                () when that variable is true, the user has full control of the game, but once its false, the level has been complete, controsl are disabled, and the cut scene plays
 
 Goal: Polishing up
     Make the Tileset fancy and add some backgrounding

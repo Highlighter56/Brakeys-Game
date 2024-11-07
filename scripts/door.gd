@@ -19,6 +19,7 @@ var erroring = false
 
 func _ready():
 	set_modulate(Color.GRAY)
+	#doorClose3()
 
 func _process(delta):
 	# Interact

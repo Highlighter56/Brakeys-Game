@@ -11,12 +11,12 @@ const JUMP_VELOCITY = -300.0
 var direction=0
 var isDead = false
 # for the State Machine - the are capitlas because they are treated as constants
-enum state {DEAD, IDLE, RUNNING, JUMPING, SLIDING, FALLING}
+enum state {DEAD, IDLE, RUNNING, JUMPING, SLIDING, FALLING, COMPLETE}
 var currentState
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var maxFallSpeed = 400
-
+var levelComplete = false
 
 func hasDied():
 	isDead = true
@@ -47,6 +47,8 @@ func _process(delta):
 				currentState = state.RUNNING
 	else:
 		currentState = state.DEAD
+	if(levelComplete):
+		currentState = state.COMPLETE
 	#print(currentState)
 
 
@@ -87,17 +89,21 @@ func _physics_process(delta):
 			if(velocity.y>=maxFallSpeed):
 				velocity.y=maxFallSpeed
 			#print(velocity.y)
+		state.COMPLETE:
+			pass
 	
-	# Handles Direction
-	# get_axis("Negative Value", "Positive Value")
-	# Gets the input direction
-	direction = Input.get_axis("move_left", "move_right")
-	
-	# Handles Jumps
-	if(Input.is_action_just_pressed("jump")):
-		if(currentState==state.IDLE or currentState==state.RUNNING or currentState==state.SLIDING):
-			jump.play()
-			velocity.y = JUMP_VELOCITY
+# This should cause it so that once the level is complete, player controls are disabled
+	if(!levelComplete):
+		# Handles Direction
+		# get_axis("Negative Value", "Positive Value")
+		# Gets the input direction
+		direction = Input.get_axis("move_left", "move_right")
+		
+		# Handles Jumps
+		if(Input.is_action_just_pressed("jump")):
+			if(currentState==state.IDLE or currentState==state.RUNNING or currentState==state.SLIDING):
+				jump.play()
+				velocity.y = JUMP_VELOCITY
 	
 	# Handles Player Controls and Disables Controls when Dead
 	if(!isDead):
@@ -112,7 +118,12 @@ func _physics_process(delta):
 			velocity.x = direction * SPEED
 		else:
 # move_towards(From, To, Delta) : will add/subtract delta to from in the direction to reach to
+# Note: this is a different Delta than the parameter for the _physics_process() method
 			velocity.x = move_toward(velocity.x, 0, SPEED)
 		
 # move_and_slide() moves the node based on its set velocity
 	move_and_slide()
+
+
+func _on_game_manager_level_complete():
+	levelComplete = true

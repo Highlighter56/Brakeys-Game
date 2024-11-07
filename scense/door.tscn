@@ -202,7 +202,7 @@ script = ExtResource("1_ocj6q")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_sylgh")
-animation = &"PartOpen"
+animation = &"FullOpen"
 
 [node name="SoundDoorOpen" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_u15dn")
@@ -221,7 +221,6 @@ wait_time = 0.5
 one_shot = true
 
 [node name="Area2D" type="Area2D" parent="."]
-visible = false
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]

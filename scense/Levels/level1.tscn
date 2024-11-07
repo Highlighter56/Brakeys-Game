@@ -1,6 +1,6 @@
 [gd_scene load_steps=31 format=3 uid="uid://copodv623rur0"]
 
-[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_b00to"]
+[ext_resource type="Script" path="res://scripts/game_manager_level_1.gd" id="1_b00to"]
 [ext_resource type="PackedScene" uid="uid://drvrybxqoacqs" path="res://scense/sign_4.tscn" id="2_xmfaa"]
 [ext_resource type="PackedScene" uid="uid://tbt34fl4nj2k" path="res://scense/sign_text.tscn" id="3_iiqbh"]
 [ext_resource type="FontFile" uid="uid://djj151oji6302" path="res://assests/fonts/PixelOperator8-Bold.ttf" id="4_clojh"]
@@ -1062,7 +1062,7 @@ layer_1/tile_data = PackedInt32Array(131066, 0, 1, 131067, 0, 0, 131068, 0, 0, 1
 
 [node name="Player" parent="." instance=ExtResource("8_0yaw4")]
 unique_name_in_owner = true
-position = Vector2(74, -48)
+position = Vector2(-68, 6)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -6)
