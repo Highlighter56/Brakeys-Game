@@ -6,6 +6,7 @@ extends Node
 @onready var delay_1 = $delay1
 @onready var delay_2 = $delay2
 @onready var delay_3 = $delay3
+@onready var delay_4 = $delay4
 
 var movePlayer = false
 var playerDirection
@@ -50,6 +51,7 @@ func addPoint():
 
 func _on_win_zone_body_entered(body):
 	emit_signal("levelComplete")
+	delay_4.start()
 
 func _on_door_2_has_opened():
 	emit_signal("levelComplete")
@@ -70,4 +72,7 @@ func _on_delay_2_timeout():
 	# before the user can notice the loop
 	delay_3.start()
 func _on_delay_3_timeout():
-	print("LEAVE LEVEL 2 NOW")
+	print("Timer 3: LEAVE LEVEL 2 NOW")
+
+func _on_delay_4_timeout():
+	print("Timer 4: Fail Safe")

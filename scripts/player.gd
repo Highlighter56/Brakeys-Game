@@ -90,7 +90,8 @@ func _physics_process(delta):
 				velocity.y=maxFallSpeed
 			#print(velocity.y)
 		state.COMPLETE:
-			pass
+			velocity.x = 0
+			move_and_slide()
 	
 # This should cause it so that once the level is complete, player controls are disabled
 	if(!levelComplete):
@@ -127,3 +128,4 @@ func _physics_process(delta):
 
 func _on_game_manager_level_complete():
 	levelComplete = true
+	
