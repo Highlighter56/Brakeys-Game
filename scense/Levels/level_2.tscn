@@ -1085,7 +1085,7 @@ one_shot = true
 
 [node name="Player" parent="." instance=ExtResource("1_oi7ex")]
 unique_name_in_owner = true
-position = Vector2(-851, -318)
+position = Vector2(0, -16)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -8)

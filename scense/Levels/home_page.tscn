@@ -1,6 +1,7 @@
-[gd_scene load_steps=29 format=3 uid="uid://dt6acoj8utxru"]
+[gd_scene load_steps=31 format=3 uid="uid://dt6acoj8utxru"]
 
 [ext_resource type="Texture2D" uid="uid://d4g075fhb8c42" path="res://assests/sprites/world_tileset2.png" id="1_24bya"]
+[ext_resource type="Script" path="res://scripts/home_page.gd" id="1_70r2j"]
 [ext_resource type="Texture2D" uid="uid://c8gr8lcqewgtf" path="res://assests/sprites/world_tileset.png" id="1_lm7l4"]
 [ext_resource type="Texture2D" uid="uid://gqjw8amtdn8h" path="res://assests/sprites/world_tileset3.png" id="1_rbflb"]
 [ext_resource type="PackedScene" uid="uid://bja0erdxog06n" path="res://scense/coin.tscn" id="3_isxs7"]
@@ -8,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c8kluhlc0tlu1" path="res://assests/sprites/world_tileset_3.1.png" id="4_755p3"]
 [ext_resource type="Texture2D" uid="uid://6obn1y4a62rh" path="res://assests/sprites/knight.png" id="4_pe6xp"]
 [ext_resource type="Texture2D" uid="uid://bkq7lcnrfdsdo" path="res://assests/sprites/Cloud.png" id="5_0do4a"]
+[ext_resource type="FontFile" uid="uid://bc61wi8n6vb0i" path="res://assests/fonts/PixelOperator8.ttf" id="10_vb1hm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_isg3c"]
 texture = ExtResource("1_rbflb")
@@ -1845,6 +1847,7 @@ _data = {
 }
 
 [node name="HomePage" type="Node2D"]
+script = ExtResource("1_70r2j")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(8, 8)
@@ -1926,34 +1929,207 @@ position = Vector2(47, 81)
 [node name="Coin2" parent="Folder_Coins" instance=ExtResource("3_isxs7")]
 position = Vector2(64, 17)
 
-[node name="Folder_Buttons" type="Node2D" parent="."]
+[node name="Folder_UI" type="Node2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-384, 0)
 
-[node name="Button" type="Button" parent="."]
+[node name="Home_Screen" type="Node2D" parent="Folder_UI"]
+
+[node name="Title" type="Button" parent="Folder_UI/Home_Screen"]
 offset_left = -133.0
 offset_top = -64.0
 offset_right = 134.0
 offset_bottom = -9.0
-text = "Kingdom Quest"
+theme_override_fonts/font = ExtResource("10_vb1hm")
 
-[node name="Button2" type="Button" parent="."]
-offset_left = -133.0
-offset_top = 6.0
-offset_right = -64.0
-offset_bottom = 33.0
-theme_override_font_sizes/font_size = 12
-text = "Settings"
+[node name="Label4" type="Label" parent="Folder_UI/Home_Screen/Title"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -87.0
+offset_top = -8.0
+offset_right = 87.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("10_vb1hm")
+theme_override_font_sizes/font_size = 24
+text = "Kingdom Quest
+"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Button3" type="Button" parent="."]
-offset_left = 65.0
-offset_top = 7.0
-offset_right = 134.0
-offset_bottom = 34.0
-theme_override_font_sizes/font_size = 13
-text = "Quit"
-
-[node name="Button4" type="Button" parent="."]
+[node name="Play_Button" type="Button" parent="Folder_UI/Home_Screen"]
 offset_left = -43.0
 offset_top = 3.0
 offset_right = 44.0
 offset_bottom = 36.0
+theme_override_fonts/font = ExtResource("10_vb1hm")
+theme_override_font_sizes/font_size = 16
+
+[node name="Label" type="Label" parent="Folder_UI/Home_Screen/Play_Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.0
+offset_top = -11.5
+offset_right = 31.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("10_vb1hm")
+theme_override_font_sizes/font_size = 24
 text = "Play"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Settings_Button" type="Button" parent="Folder_UI/Home_Screen"]
+offset_left = -133.0
+offset_top = 6.0
+offset_right = -64.0
+offset_bottom = 33.0
+theme_override_fonts/font = ExtResource("10_vb1hm")
+theme_override_font_sizes/font_size = 12
+
+[node name="Label2" type="Label" parent="Folder_UI/Home_Screen/Settings_Button"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 8.0
+offset_right = 53.0
+offset_bottom = 16.0
+scale = Vector2(1.3, 1.3)
+theme_override_fonts/font = ExtResource("10_vb1hm")
+theme_override_font_sizes/font_size = 8
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Quit_Button" type="Button" parent="Folder_UI/Home_Screen"]
+offset_left = 65.0
+offset_top = 7.0
+offset_right = 134.0
+offset_bottom = 34.0
+theme_override_fonts/font = ExtResource("10_vb1hm")
+theme_override_font_sizes/font_size = 13
+
+[node name="Label3" type="Label" parent="Folder_UI/Home_Screen/Quit_Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -32.0
+offset_top = -8.0
+offset_right = 32.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("10_vb1hm")
+theme_override_font_sizes/font_size = 16
+text = "Quite
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Levels" type="Node2D" parent="Folder_UI"]
+position = Vector2(384, 0)
+
+[node name="Level_One_Button" type="Button" parent="Folder_UI/Levels"]
+offset_left = -126.0
+offset_top = -22.0
+offset_right = -91.0
+offset_bottom = 11.0
+scale = Vector2(1.5, 1.5)
+theme_override_fonts/font = ExtResource("10_vb1hm")
+theme_override_font_sizes/font_size = 16
+
+[node name="Label" type="Label" parent="Folder_UI/Levels/Level_One_Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -17.5
+offset_top = -12.0
+offset_right = 17.5
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("10_vb1hm")
+theme_override_font_sizes/font_size = 24
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level_Two_Button" type="Button" parent="Folder_UI/Levels"]
+offset_left = -26.0
+offset_top = -22.0
+offset_right = 9.0
+offset_bottom = 11.0
+scale = Vector2(1.5, 1.5)
+theme_override_fonts/font = ExtResource("10_vb1hm")
+theme_override_font_sizes/font_size = 16
+
+[node name="Label" type="Label" parent="Folder_UI/Levels/Level_Two_Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -17.5
+offset_top = -12.0
+offset_right = 17.5
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("10_vb1hm")
+theme_override_font_sizes/font_size = 24
+text = "2
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level_Three_Button" type="Button" parent="Folder_UI/Levels"]
+offset_left = 74.0
+offset_top = -22.0
+offset_right = 109.0
+offset_bottom = 11.0
+scale = Vector2(1.5, 1.5)
+theme_override_fonts/font = ExtResource("10_vb1hm")
+theme_override_font_sizes/font_size = 16
+
+[node name="Label" type="Label" parent="Folder_UI/Levels/Level_Three_Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -17.5
+offset_top = -12.0
+offset_right = 17.5
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("10_vb1hm")
+theme_override_font_sizes/font_size = 24
+text = "3
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Folder_UI/Home_Screen/Play_Button" to="." method="_on_p_lay_button_pressed"]
+[connection signal="pressed" from="Folder_UI/Home_Screen/Settings_Button" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="Folder_UI/Home_Screen/Quit_Button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Folder_UI/Levels/Level_One_Button" to="." method="_on_p_lay_button_pressed"]
+[connection signal="pressed" from="Folder_UI/Levels/Level_Two_Button" to="." method="_on_p_lay_button_pressed"]
+[connection signal="pressed" from="Folder_UI/Levels/Level_Three_Button" to="." method="_on_p_lay_button_pressed"]
