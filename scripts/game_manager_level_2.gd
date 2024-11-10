@@ -22,8 +22,11 @@ func _process(delta):
 
 func _physics_process(delta):
 	# This code is to control the player during the cut scene
-	if(!movePlayer and player.is_on_floor() and player.currentState == player.state.COMPLETE):
-		player.animated_sprite_2d.play("idle")
+	if(!movePlayer and player.currentState == player.state.COMPLETE):
+		player.velocity.x = 0
+		player.move_and_slide()
+		if(player.is_on_floor()):
+			player.animated_sprite_2d.play("idle")
 	if(movePlayer):
 		player.animated_sprite_2d.play("run")
 		# If player is left of door
@@ -72,7 +75,9 @@ func _on_delay_2_timeout():
 	# before the user can notice the loop
 	delay_3.start()
 func _on_delay_3_timeout():
-	print("Timer 3: LEAVE LEVEL 2 NOW")
+	#print("Timer 3: LEAVE LEVEL 2 NOW")
+	get_tree().change_scene_to_file("res://scense/Levels/home_page.tscn")
 
 func _on_delay_4_timeout():
-	print("Timer 4: Fail Safe")
+	#print("Timer 4: Fail Safe")
+	get_tree().change_scene_to_file("res://scense/Levels/home_page.tscn")

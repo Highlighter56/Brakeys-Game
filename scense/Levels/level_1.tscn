@@ -1,27 +1,27 @@
 [gd_scene load_steps=31 format=3 uid="uid://copodv623rur0"]
 
-[ext_resource type="Script" path="res://scripts/game_manager_level_1.gd" id="1_b00to"]
-[ext_resource type="PackedScene" uid="uid://drvrybxqoacqs" path="res://scense/sign_4.tscn" id="2_xmfaa"]
-[ext_resource type="PackedScene" uid="uid://tbt34fl4nj2k" path="res://scense/sign_text.tscn" id="3_iiqbh"]
-[ext_resource type="FontFile" uid="uid://djj151oji6302" path="res://assests/fonts/PixelOperator8-Bold.ttf" id="4_clojh"]
-[ext_resource type="PackedScene" uid="uid://cs64trkmiyb8m" path="res://scense/door.tscn" id="5_mjat6"]
-[ext_resource type="PackedScene" uid="uid://bbrtsynv3j782" path="res://scense/firework.tscn" id="6_g8smh"]
-[ext_resource type="Texture2D" uid="uid://c8gr8lcqewgtf" path="res://assests/sprites/world_tileset.png" id="7_g84kg"]
-[ext_resource type="PackedScene" uid="uid://g6dmb1eb2kqm" path="res://scense/player.tscn" id="8_0yaw4"]
-[ext_resource type="Texture2D" uid="uid://c8kluhlc0tlu1" path="res://assests/sprites/world_tileset_3.1.png" id="8_gtx41"]
-[ext_resource type="Script" path="res://scripts/camera2D.gd" id="9_buqu2"]
-[ext_resource type="PackedScene" uid="uid://dw6lfl6tnugud" path="res://scense/killzone.tscn" id="10_i6n14"]
-[ext_resource type="PackedScene" uid="uid://bja0erdxog06n" path="res://scense/coin.tscn" id="11_ynjoh"]
-[ext_resource type="PackedScene" uid="uid://du30c8gm6jwmn" path="res://scense/platform.tscn" id="12_guqji"]
-[ext_resource type="PackedScene" uid="uid://bx0h3tcdbwl06" path="res://scense/platform_desert.tscn" id="13_8d48r"]
-[ext_resource type="PackedScene" uid="uid://6g8rcr5vemtq" path="res://scense/slime_green.tscn" id="14_awc4x"]
-[ext_resource type="PackedScene" uid="uid://cnnrdyce0sddj" path="res://scense/slime_purple.tscn" id="15_d6155"]
-[ext_resource type="PackedScene" uid="uid://d2t4vnccuudp1" path="res://scense/sign_3.tscn" id="16_fndq5"]
-[ext_resource type="PackedScene" uid="uid://cvubdk8qkyf10" path="res://scense/button.tscn" id="17_wwpdr"]
-[ext_resource type="PackedScene" uid="uid://cut62fnhggbx5" path="res://scense/button_block.tscn" id="18_mwahi"]
+[ext_resource type="Script" path="res://scripts/game_manager_level_1.gd" id="1_581iw"]
+[ext_resource type="PackedScene" uid="uid://drvrybxqoacqs" path="res://scense/sign_4.tscn" id="2_1d6cw"]
+[ext_resource type="PackedScene" uid="uid://tbt34fl4nj2k" path="res://scense/sign_text.tscn" id="3_woxbm"]
+[ext_resource type="FontFile" uid="uid://djj151oji6302" path="res://assests/fonts/PixelOperator8-Bold.ttf" id="4_ssi68"]
+[ext_resource type="PackedScene" uid="uid://cs64trkmiyb8m" path="res://scense/door.tscn" id="5_wgqe4"]
+[ext_resource type="PackedScene" uid="uid://bbrtsynv3j782" path="res://scense/firework.tscn" id="6_m7twi"]
+[ext_resource type="Texture2D" uid="uid://c8gr8lcqewgtf" path="res://assests/sprites/world_tileset.png" id="7_25e4q"]
+[ext_resource type="Texture2D" uid="uid://c8kluhlc0tlu1" path="res://assests/sprites/world_tileset_3.1.png" id="8_r1d4k"]
+[ext_resource type="PackedScene" uid="uid://g6dmb1eb2kqm" path="res://scense/player.tscn" id="9_mkvtt"]
+[ext_resource type="Script" path="res://scripts/camera2D.gd" id="10_6xl41"]
+[ext_resource type="PackedScene" uid="uid://dw6lfl6tnugud" path="res://scense/killzone.tscn" id="11_mk6li"]
+[ext_resource type="PackedScene" uid="uid://bja0erdxog06n" path="res://scense/coin.tscn" id="12_khvtm"]
+[ext_resource type="PackedScene" uid="uid://du30c8gm6jwmn" path="res://scense/platform.tscn" id="13_4ip2s"]
+[ext_resource type="PackedScene" uid="uid://bx0h3tcdbwl06" path="res://scense/platform_desert.tscn" id="14_uggnm"]
+[ext_resource type="PackedScene" uid="uid://6g8rcr5vemtq" path="res://scense/slime_green.tscn" id="15_oymit"]
+[ext_resource type="PackedScene" uid="uid://cnnrdyce0sddj" path="res://scense/slime_purple.tscn" id="16_4te0j"]
+[ext_resource type="PackedScene" uid="uid://d2t4vnccuudp1" path="res://scense/sign_3.tscn" id="17_86lf8"]
+[ext_resource type="PackedScene" uid="uid://cvubdk8qkyf10" path="res://scense/button.tscn" id="18_p3oy1"]
+[ext_resource type="PackedScene" uid="uid://cut62fnhggbx5" path="res://scense/button_block.tscn" id="19_ley3b"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m5t6p"]
-texture = ExtResource("7_g84kg")
+texture = ExtResource("7_25e4q")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -419,7 +419,7 @@ texture = ExtResource("7_g84kg")
 2:4/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gnd1t"]
-texture = ExtResource("8_gtx41")
+texture = ExtResource("8_r1d4k")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -1008,27 +1008,27 @@ _data = {
 
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
-script = ExtResource("1_b00to")
+script = ExtResource("1_581iw")
 
 [node name="DisplaySign" type="Node2D" parent="GameManager"]
 position = Vector2(32, 0)
 
-[node name="Sign3" parent="GameManager/DisplaySign" instance=ExtResource("2_xmfaa")]
+[node name="Sign3" parent="GameManager/DisplaySign" instance=ExtResource("2_1d6cw")]
 position = Vector2(-24, -215)
 label_node = NodePath("../Sign Text")
 
-[node name="Sign Text" parent="GameManager/DisplaySign" instance=ExtResource("3_iiqbh")]
+[node name="Sign Text" parent="GameManager/DisplaySign" instance=ExtResource("3_woxbm")]
 offset_left = -67.0
 offset_top = -238.0
 offset_right = 21.0
 offset_bottom = -193.0
-theme_override_fonts/font = ExtResource("4_clojh")
+theme_override_fonts/font = ExtResource("4_ssi68")
 text = "Collect All The Coins!"
 
-[node name="Door" parent="GameManager" instance=ExtResource("5_mjat6")]
+[node name="Door" parent="GameManager" instance=ExtResource("5_wgqe4")]
 position = Vector2(-48, -176)
 
-[node name="Firework1" parent="GameManager" instance=ExtResource("6_g8smh")]
+[node name="Firework1" parent="GameManager" instance=ExtResource("6_m7twi")]
 position = Vector2(-180, 152)
 xStart = -19
 yStart = -9
@@ -1036,7 +1036,7 @@ xEnd = -6
 yEnd = -21
 time = 0.2
 
-[node name="Firework2" parent="GameManager" instance=ExtResource("6_g8smh")]
+[node name="Firework2" parent="GameManager" instance=ExtResource("6_m7twi")]
 position = Vector2(-180, 152)
 xStart = 5
 yStart = -13
@@ -1044,7 +1044,7 @@ xEnd = 18
 yEnd = -25
 time = 0.7
 
-[node name="Firework3" parent="GameManager" instance=ExtResource("6_g8smh")]
+[node name="Firework3" parent="GameManager" instance=ExtResource("6_m7twi")]
 position = Vector2(-180, 152)
 xStart = -6
 yStart = -23
@@ -1060,7 +1060,7 @@ layer_0/tile_data = PackedInt32Array(786417, 0, 15, 851953, 0, 15, 917489, 0, 15
 layer_1/name = "Forground"
 layer_1/tile_data = PackedInt32Array(131066, 0, 1, 131067, 0, 0, 131068, 0, 0, 131069, 0, 0, 131070, 0, 0, 131071, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, -131067, 720896, 0, -131066, 0, 0, -131065, 0, 0, -131070, 0, 0, -131071, 0, 1, -196607, 0, 0, -196608, 0, 0, -131073, 0, 0, -131076, 589824, 0, -131075, 655360, 0, -131074, 720896, 0, -131069, 589824, 0, -131068, 655360, 0, -196613, 0, 0, -131077, 0, 1, -65544, 0, 1, -131080, 0, 1, -196601, 0, 5, -327673, 0, 4, -262137, 0, 4, -393209, 0, 3, -131064, 0, 0, -393189, 458752, 0, -393188, 458752, 0, -393187, 458752, 0, -393186, 458752, 0, -327653, 393216, 2, -262116, 393216, 2, -262114, 393216, 2, -327650, 393216, 2, -327649, 393216, 2, -262115, 393216, 2, -327652, 393216, 2, -327651, 458752, 2, -393185, 458752, 0, -589802, 393216, 0, -524265, 393216, 0, -655340, 393216, 0, -589803, 393216, 0, -655341, 393216, 0, -655342, 393216, 0, -458729, 393216, 1, -458730, 393216, 1, -524266, 393216, 1, -524267, 393216, 1, -524268, 393216, 1, -589804, 393216, 1, -589805, 393216, 1, -589806, 393216, 1, -524269, 393216, 1, -458731, 393216, 1, -393193, 393216, 1, -393194, 393216, 1, -458728, 393216, 1, -524264, 393216, 0, 65533, 524288, 3, -458725, 524288, 3, 524331, 393216, 1, 458795, 393216, 1, 458796, 327680, 1, 393261, 327680, 0, 393268, 262144, 1, 393269, 393216, 1, 524337, 524288, 1, 524336, 327680, 0, 524335, 393216, 1, 524334, 262144, 1, 524333, 524288, 0, 524332, 262144, 1, 458797, 327680, 1, 458798, 327680, 1, 393260, 327680, 0, 393259, 393216, 1, 327724, 262144, 1, 196657, 327680, 0, 262194, 262144, 1, 327723, 262144, 1, 262187, 327681, 1610612737, 131120, 327680, 0, 131121, 327680, 0, 196658, 327680, 0, 131122, 393216, 1, 65585, 327680, 0, 65586, 327680, 1, 196659, 262144, 1, 262195, 524288, 1, 327732, 524288, 1, 327731, 524288, 1, 65583, 327680, 1, 46, 327680, 0, -65490, 262144, 1, -65491, 262144, 1, 45, 262144, 1, 44, 262144, 1, 196651, 262144, 1, 393258, 262144, 1, 458794, 262144, 1, 524330, 393216, 1, 589865, 393216, 1, 65584, 327680, 0, 65582, 327680, 1, 47, 327680, 0, 48, 327680, 1, -65489, 262144, 1, -65488, 327680, 1, 49, 327680, 0, 131123, 327680, 1, 589868, 524288, 1, 589866, 262144, 1, 589867, 524288, 1, 589869, 393216, 1, 589870, 393216, 1, 589871, 262144, 1, 589872, 393216, 1, 589873, 524288, 1, 589874, 393216, 1, 589875, 262144, 1, 589876, 262144, 1, 589877, 393216, 1, 262196, 262144, 1, 50, 262144, 1, -65487, 262144, 1, -131025, 262144, 1, -131024, 262144, 1, -131023, 262144, 1, -65486, 262144, 1, -65485, 589824, 2, -65484, 655360, 2, -65483, 655360, 2, -65482, 655360, 2, -65481, 655360, 2, -65480, 655360, 2, -65479, 720896, 2, -65478, 262144, 0, -65477, 262144, 0, -65476, 262144, 0, -65475, 262144, 0, -65474, 262144, 0, 59, 262144, 1, 60, 262144, 1, 61, 262144, 1, 62, 262144, 1, 58, 262144, 1, 65595, 262144, 1, 65596, 262144, 1, 65597, 262144, 1, -196550, 327680, 4, -131014, 327680, 5, -262086, 327680, 4, -327622, 327680, 3, -262085, 327680, 4, -196546, 327680, 4, -262082, 327680, 4, -327621, 327680, 3, -196547, 327680, 4, -327618, 327680, 3, -131013, 327680, 5, -131011, 327680, 5, -131010, 327680, 5, -196549, 327680, 4, -131012, 327680, 5, -196548, 327680, 4, -327619, 327680, 3, -262083, 327680, 4, -327620, 327680, 3, -262084, 327680, 4, 131115, 65536, 7, -196561, 458752, 6, 327722, 393217, 1, 196660, 327680, 1, -131022, 262144, 8, -655345, 393216, 1, -720881, 393216, 0, -720882, 393216, 0, -655346, 393216, 1, -720884, 655360, 0, -720883, 720896, 0, -720890, 589824, 0, -720895, 589824, 0, -720894, 655360, 0, -720893, 720896, 0, -655355, 393216, 1, -720892, 393216, 0, -720891, 393216, 0, -655356, 393216, 1, -786427, 524288, 8, -786418, 393216, 6, -720896, 458752, 0, -655360, 393216, 2, -589825, 393216, 2, -524289, 393216, 2, -524290, 393216, 2, -524291, 393216, 2, -524292, 393216, 2, -589827, 393216, 2, -655362, 458752, 0, -655361, 458752, 0, -589826, 393216, 2, -589828, 393216, 2, -655364, 458752, 0, -655363, 458752, 0, -655365, 458752, 0, -589829, 393216, 2, 327733, 524288, 0, 327734, 393216, 1, 393270, 524288, 0, 393271, 262144, 1, 393272, 524288, 0, 393273, 524288, 0, 589878, 393216, 1, 589879, 393216, 1, 65587, 327680, 1, 131124, 327680, 1, 196661, 327680, 1, 262198, 262144, 1, 262199, 524288, 0, 262200, 393216, 1, 262201, 262144, 1, 262202, 524288, 0, 327738, 393216, 1, 327739, 393216, 1, 327737, 393216, 1, 327736, 393216, 1, 327735, 393216, 1, 262197, 327680, 1, 327740, 524288, 0, 327741, 393216, 1, 589887, 524288, 1, 589880, 524288, 0, 589881, 393216, 1, 589882, 524288, 0, 589883, 393216, 1, 589884, 393216, 1, 589885, 524288, 0, 589886, 524288, 0, 65588, 327680, 1, 131125, 327680, 1, 131126, 524288, 0, 131127, 327680, 1, 131128, 327680, 1, 196664, 327680, 1, 196665, 327680, 1, 196666, 327680, 1, 262203, 524288, 0, 262204, 524288, 0, 262205, 393216, 1, 196663, 327680, 1, 196662, 327680, 1, 655401, 393216, 1, 786473, 524288, 1, 720937, 524288, 1, 655402, 262144, 1, 720938, 393216, 1, 786474, 524288, 1, 786475, 524288, 1, 720939, 393216, 1, 720940, 393216, 1, 655404, 524288, 1, 786476, 524288, 1, 720941, 524288, 1, 786477, 524288, 1, 655403, 262144, 1, 655422, 524288, 0, 655423, 524288, 1, 720960, 524288, 1, 786496, 393216, 1, 655424, 393216, 1, 589888, 524288, 1, 720959, 524288, 1, 720958, 524288, 1, 720957, 524288, 0, 720956, 524288, 0, 720955, 524288, 0, 720954, 524288, 0, 720953, 524288, 1, 720952, 524288, 1, 720951, 524288, 1, 720950, 524288, 1, 720949, 524288, 1, 720948, 524288, 1, 720947, 524288, 1, 720946, 524288, 1, 655409, 262144, 1, 655408, 262144, 1, 655407, 262144, 1, 655406, 524288, 1, 655405, 524288, 1, 655410, 524288, 1, 655411, 524288, 1, 655417, 524288, 0, 655416, 524288, 0, 655415, 393216, 1, 655414, 393216, 1, 655413, 393216, 1, 655412, 524288, 1, 655418, 524288, 0, 655419, 524288, 0, 655420, 524288, 0, 655421, 524288, 0, 786491, 524288, 1, 786490, 524288, 1, 786489, 393216, 1, 786488, 393216, 1, 720942, 524288, 1, 720943, 524288, 1, 720944, 262144, 1, 786480, 393216, 1, 786481, 524288, 1, 720945, 524288, 1, 786482, 524288, 1, 786483, 524288, 1, 786484, 393216, 1, 786485, 393216, 1, 786486, 393216, 1, 786487, 393216, 1, 786495, 393216, 1, 786494, 393216, 1, 786493, 393216, 1, 786492, 524288, 1, 786479, 524288, 1, 786478, 524288, 1, 524352, 524288, 1, 524353, 524288, 1, 589889, 524288, 1, 589890, 524288, 1, 655426, 524288, 0, 524354, 524288, 0, 262206, 524288, 0, 720962, 524288, 1, 786498, 524288, 1, 720961, 524288, 1, 655425, 524288, 1, 786497, 524288, 1, 524355, 524288, 0, 524356, 524288, 0, 458820, 524288, 0, 196667, 524288, 0, 196668, 524288, 0, 196669, 524288, 0, 131136, 524288, 0, 131137, 524288, 0, 131138, 524288, 0, 196675, 524288, 0, 196676, 524288, 0, 196677, 524288, 0, 262213, 524288, 0, 327749, 524288, 0, 196670, 524288, 0, 196671, 524288, 0, 196672, 524288, 0, 196673, 524288, 0, 196674, 524288, 0, 131140, 524288, 0, 131139, 524288, 0, 196678, 524288, 0, 262214, 524288, 0, 327750, 524288, 0, 393286, 524288, 0, 393285, 524288, 0, 458821, 524288, 0, 589892, 524288, 0, 589891, 524288, 0, 655427, 524288, 0, 655428, 524288, 0, 589893, 524288, 0, 524357, 524288, 0, 524358, 524288, 0, 458822, 524288, 0, 262207, 524288, 0, 65603, 524288, 0, 65604, 524288, 0, 131141, 524288, 0, 327751, 524288, 0, 393287, 524288, 0, 458823, 524288, 0, 524359, 524288, 0, 393288, 524288, 0, 458824, 524288, 0, 589894, 524288, 0, 262215, 524288, 0, 327752, 524288, 0, 393289, 524288, 0, 196611, 0, 0, 196612, 0, 0, 196610, 0, 1, 196609, 0, 1, 196607, 0, 1, 196606, 0, 1, 196601, 0, 1, -131081, 0, 1, -196617, 0, 1, -131072, 0, 1, -65537, 0, 1, 262148, 0, 1, 262147, 0, 1, 262146, 0, 1, 327681, 0, 1, 327682, 0, 1, 262145, 0, 1, -131082, 0, 1, -196618, 0, 1, -131083, 0, 1, 131059, 0, 1, 262135, 0, 1, 262136, 0, 1, 196600, 0, 1, -131085, 0, 1, -131084, 0, 1, -196620, 0, 1, -196619, 0, 1, 131060, 0, 1, -65545, 0, 1, 131065, 0, 1, 131064, 458752, 5, 458736, 0, 1, 458737, 0, 1, 524273, 0, 1, 524274, 0, 1, 524275, 0, 1, 458735, 0, 1, 458734, 0, 1, 393198, 0, 1, 393197, 0, 1, 327661, 0, 1, 262125, 0, 1, 196589, 0, 1, 131053, 0, 1, 65517, 0, 1, 65518, 0, 1, -18, 0, 1, -65554, 0, 1, -131089, 0, 1, -196624, 0, 1, -196623, 0, 1, -262159, 0, 1, -262158, 0, 1, -196621, 0, 1, -196622, 0, 1, -196625, 0, 1, -131090, 0, 1, -65555, 0, 1, -19, 0, 1, 65516, 0, 1, -65553, 0, 1, -131088, 0, 1, -131086, 0, 1, -131087, 0, 1, -65551, 0, 1, -65552, 0, 1, -16, 0, 1, -17, 0, 1, 65519, 0, 1, 131054, 0, 1, 131052, 0, 1, 196588, 0, 1, -262160, 0, 1, -262157, 0, 1, 196596, 0, 1, 196597, 0, 1, 196598, 0, 1, 196599, 0, 1, 196595, 0, 1, 262124, 0, 1, 327660, 0, 1, 393196, 0, 1, 458733, 0, 1, 524271, 0, 1, 524272, 0, 1, 589809, 0, 1, 589810, 0, 1, 589811, 0, 1, 524280, 0, 1, 524281, 0, 1, 524282, 0, 1, 524283, 0, 1, 458749, 0, 1, 589816, 0, 1, 589815, 0, 1, 196602, 0, 1, 196603, 0, 1, 196604, 0, 1, 196605, 0, 1, 393205, 0, 1, 393206, 0, 1, 262131, 0, 1, 196594, 0, 1, 262130, 0, 1, 131058, 0, 1, 262129, 0, 1, 196593, 0, 1, 131051, 0, 1, 196587, 0, 1, 262123, 0, 1, 327659, 0, 1, 458739, 0, 1, 458740, 0, 1, 393204, 0, 1, 458742, 0, 1, 524276, 0, 1, 458743, 0, 1, 524279, 0, 1, 458741, 0, 1, 524278, 0, 1, 589817, 0, 1, 589814, 0, 1, 524277, 0, 1, 589812, 0, 1, 589813, 0, 1, 458738, 0, 1, 524284, 0, 1, 524285, 0, 1, 458750, 0, 1, 589818, 0, 1, 589819, 0, 1, 524286, 0, 1, 458751, 0, 1, 393216, 0, 1, 327680, 0, 1, 262128, 0, 1, 327662, 524288, 7, 393213, 458752, 6, 393207, 524288, 5, -65519, 131072, 0, 17, 131072, 1, 18, 131072, 1, 65554, 131072, 1, 19, 131072, 1, -131054, 131072, 8, -262126, 131072, 4, -131055, 65536, 6, -65518, 131072, 0, -65517, 131072, 0, 196641, 131072, 2, 196642, 131072, 2, 65570, 131072, 4, 262178, 131072, 1, 196643, 131072, 2, 262179, 131072, 1, 131108, 65536, 5, 196644, 131072, 2, 25, 131072, 2, -65510, 65536, 8, 26, 131072, 2, 65562, 131072, 1, 27, 131072, 2, 65563, 131072, 1, 28, 131072, 2, 65564, 131072, 1, 29, 131072, 2, -65509, 65536, 5, 65565, 131072, 1, 30, 131072, 2, 196628, 131072, 2, 196629, 131072, 2, 262165, 131072, 1, 262166, 131072, 1, 262167, 131072, 1, 131093, 262144, 8, 131094, 65536, 6, 196630, 131072, 2, 196631, 131072, 2, 196632, 131072, 2, 196645, 131072, 2, 196646, 131072, 2, 262180, 131072, 1, 262181, 131072, 1, 196640, 131072, 2, 262177, 131072, 1, -589800, 393216, 5, -720877, 393216, 5, -655336, 393216, 3, -786413, 393216, 4, -851949, 393216, 3, -655338, 458752, 8, -458722, 393216, 7, -655367, 393216, 2, -655366, 393216, 2, -589830, 393216, 2, -589831, 393216, 2, -524294, 393216, 2, -524293, 393216, 2, -720901, 393216, 5, -786437, 393216, 3, -655351, 393216, 1, -720886, 393216, 0, -655350, 393216, 1, -720889, 655360, 0, -720888, 720896, 0, -720887, 393216, 0, -786422, 65536, 8, -720885, 589824, 0, 43, 262145, 1, -65492, 262145, 1, -131026, 262145, 1, 51, 262145, 1, 524329, 524289, 0, 262188, 262145, 1, 327725, 262145, 1)
 
-[node name="Player" parent="." instance=ExtResource("8_0yaw4")]
+[node name="Player" parent="." instance=ExtResource("9_mkvtt")]
 unique_name_in_owner = true
 position = Vector2(-68, 6)
 
@@ -1069,13 +1069,13 @@ position = Vector2(0, -6)
 zoom = Vector2(4, 4)
 limit_bottom = 200
 position_smoothing_enabled = true
-script = ExtResource("9_buqu2")
+script = ExtResource("10_6xl41")
 
 [node name="Timer" type="Timer" parent="Player/Camera2D"]
 wait_time = 0.07
 one_shot = true
 
-[node name="FallDamage" parent="." instance=ExtResource("10_i6n14")]
+[node name="FallDamage" parent="." instance=ExtResource("11_mk6li")]
 position = Vector2(1, 256)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FallDamage"]
@@ -1084,207 +1084,207 @@ shape = SubResource("WorldBoundaryShape2D_y18pg")
 [node name="Folder_Coins" type="Node" parent="."]
 unique_name_in_owner = true
 
-[node name="Coin" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(56, 4)
 
-[node name="Coin43" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin43" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(-200, 6)
 
-[node name="Coin57" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin57" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(9, 73)
 
-[node name="Coin58" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin58" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(9, 56)
 
-[node name="Coin52" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin52" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(-200, -7)
 
-[node name="Coin26" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin26" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(202, -43)
 
-[node name="Coin66" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin66" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(328, 42)
 
-[node name="Coin67" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin67" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(455, -5)
 
-[node name="Coin69" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin69" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(568, 42)
 
-[node name="Coin2" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin2" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(202, -64)
 
-[node name="Coin6" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin6" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(936, -31)
 
-[node name="Coin7" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin7" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(936, -43)
 
-[node name="Coin8" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin8" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(936, -55)
 
-[node name="Coin9" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin9" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(936, -68)
 
-[node name="Coin10" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin10" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(952, -31)
 
-[node name="Coin11" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin11" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(952, -43)
 
-[node name="Coin12" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin12" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(952, -55)
 
-[node name="Coin13" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin13" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(952, -68)
 
-[node name="Coin14" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin14" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(968, -31)
 
-[node name="Coin15" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin15" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(968, -43)
 
-[node name="Coin16" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin16" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(968, -55)
 
-[node name="Coin17" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin17" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(968, -68)
 
-[node name="Coin27" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin27" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(1032, 121)
 
-[node name="Coin28" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin28" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(1032, 109)
 
-[node name="Coin29" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin29" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(1032, 97)
 
-[node name="Coin30" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin30" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(1032, 84)
 
-[node name="Coin31" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin31" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(1047, 121)
 
-[node name="Coin32" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin32" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(1047, 109)
 
-[node name="Coin33" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin33" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(1047, 97)
 
-[node name="Coin34" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin34" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(1047, 84)
 
-[node name="Coin35" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin35" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(1063, 121)
 
-[node name="Coin36" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin36" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(1063, 109)
 
-[node name="Coin37" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin37" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(1063, 97)
 
-[node name="Coin38" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin38" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(1063, 84)
 
-[node name="Coin39" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin39" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(1079, 121)
 
-[node name="Coin40" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin40" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(1079, 109)
 
-[node name="Coin41" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin41" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(1079, 97)
 
-[node name="Coin42" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin42" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(1079, 84)
 
-[node name="Coin44" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin44" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(1096, 95)
 
-[node name="Coin46" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin46" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(1096, 106)
 
-[node name="Coin47" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin47" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(1095, 71)
 
-[node name="Coin21" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin21" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(984, -68)
 
-[node name="Coin48" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin48" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(1079, 72)
 
-[node name="Coin49" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin49" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(1063, 73)
 
-[node name="Coin50" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin50" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(1047, 72)
 
-[node name="Coin51" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin51" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(1032, 72)
 
-[node name="Coin45" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin45" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(1096, 83)
 
-[node name="Coin18" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin18" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(984, -31)
 
-[node name="Coin19" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin19" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(984, -43)
 
-[node name="Coin20" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin20" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(984, -55)
 
-[node name="Coin22" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin22" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(1000, -31)
 
-[node name="Coin23" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin23" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(1000, -43)
 
-[node name="Coin24" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin24" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(1000, -55)
 
-[node name="Coin25" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin25" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(1000, -68)
 
-[node name="Coin5" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin5" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(120, -87)
 
-[node name="Coin53" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin53" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(40, -182)
 
-[node name="Coin55" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin55" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(52, -182)
 
-[node name="Coin56" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin56" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(28, -182)
 
-[node name="Coin60" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin60" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(-24, -182)
 
-[node name="Coin61" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin61" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(-8, -182)
 
-[node name="Coin54" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin54" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(-120, -56)
 
-[node name="Coin59" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin59" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(-8, -71)
 
-[node name="Coin64" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin64" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(-8, -56)
 
-[node name="Coin65" parent="Folder_Coins" instance=ExtResource("11_ynjoh")]
+[node name="Coin65" parent="Folder_Coins" instance=ExtResource("12_khvtm")]
 position = Vector2(-8, -86)
 
 [node name="Folder_Platforms" type="Node" parent="."]
 
-[node name="Platform" parent="Folder_Platforms" instance=ExtResource("12_guqji")]
+[node name="Platform" parent="Folder_Platforms" instance=ExtResource("13_4ip2s")]
 position = Vector2(120, 26)
 
-[node name="Platform3" parent="Folder_Platforms" instance=ExtResource("12_guqji")]
+[node name="Platform3" parent="Folder_Platforms" instance=ExtResource("13_4ip2s")]
 position = Vector2(151, 26)
 
-[node name="Platform2" parent="Folder_Platforms" instance=ExtResource("12_guqji")]
+[node name="Platform2" parent="Folder_Platforms" instance=ExtResource("13_4ip2s")]
 position = Vector2(160, -28)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Folder_Platforms/Platform2"]
@@ -1293,7 +1293,7 @@ libraries = {
 }
 autoplay = "move2"
 
-[node name="PlatformDesert" parent="Folder_Platforms" instance=ExtResource("13_8d48r")]
+[node name="PlatformDesert" parent="Folder_Platforms" instance=ExtResource("14_uggnm")]
 position = Vector2(350, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Folder_Platforms/PlatformDesert"]
@@ -1304,32 +1304,32 @@ autoplay = "move"
 
 [node name="Folder_GreenSlimes" type="Node" parent="."]
 
-[node name="Green Slime3" parent="Folder_GreenSlimes" instance=ExtResource("14_awc4x")]
+[node name="Green Slime3" parent="Folder_GreenSlimes" instance=ExtResource("15_oymit")]
 position = Vector2(840, 132)
 
-[node name="Green Slime5" parent="Folder_GreenSlimes" instance=ExtResource("14_awc4x")]
+[node name="Green Slime5" parent="Folder_GreenSlimes" instance=ExtResource("15_oymit")]
 position = Vector2(-168, 20)
 
-[node name="Green Slime6" parent="Folder_GreenSlimes" instance=ExtResource("14_awc4x")]
+[node name="Green Slime6" parent="Folder_GreenSlimes" instance=ExtResource("15_oymit")]
 position = Vector2(-216, 84)
 
-[node name="Green Slime7" parent="Folder_GreenSlimes" instance=ExtResource("14_awc4x")]
+[node name="Green Slime7" parent="Folder_GreenSlimes" instance=ExtResource("15_oymit")]
 position = Vector2(-120, 100)
 
-[node name="Green Slime4" parent="Folder_GreenSlimes" instance=ExtResource("14_awc4x")]
+[node name="Green Slime4" parent="Folder_GreenSlimes" instance=ExtResource("15_oymit")]
 position = Vector2(936, 132)
 
 [node name="Folder_PurpleSlime" type="Node" parent="."]
 
-[node name="slime_purple4" parent="Folder_PurpleSlime" instance=ExtResource("15_d6155")]
+[node name="slime_purple4" parent="Folder_PurpleSlime" instance=ExtResource("16_4te0j")]
 position = Vector2(376, 36)
 SPEED = 20
 
-[node name="slime_purple5" parent="Folder_PurpleSlime" instance=ExtResource("15_d6155")]
+[node name="slime_purple5" parent="Folder_PurpleSlime" instance=ExtResource("16_4te0j")]
 position = Vector2(488, -12)
 SPEED = 20
 
-[node name="slime_purple6" parent="Folder_PurpleSlime" instance=ExtResource("15_d6155")]
+[node name="slime_purple6" parent="Folder_PurpleSlime" instance=ExtResource("16_4te0j")]
 position = Vector2(600, 36)
 SPEED = 20
 
@@ -1337,11 +1337,11 @@ SPEED = 20
 
 [node name="Sign1" type="Node" parent="Folder_Sign"]
 
-[node name="Sign3" parent="Folder_Sign/Sign1" instance=ExtResource("16_fndq5")]
+[node name="Sign3" parent="Folder_Sign/Sign1" instance=ExtResource("17_86lf8")]
 position = Vector2(-169, -103)
 label_node = NodePath("../Sign Text")
 
-[node name="Sign Text" parent="Folder_Sign/Sign1" instance=ExtResource("3_iiqbh")]
+[node name="Sign Text" parent="Folder_Sign/Sign1" instance=ExtResource("3_woxbm")]
 anchors_preset = -1
 anchor_top = -0.0416667
 anchor_bottom = 0.0108025
@@ -1349,16 +1349,16 @@ offset_left = -214.0
 offset_top = -133.0
 offset_right = -126.0
 offset_bottom = -88.0
-text = "Your Goal is to Collect all the Coins, then reach the End Gate. "
+text = "Your Goal is to Collect all the Coins, then reach the end!"
 metadata/_edit_use_anchors_ = true
 
 [node name="Sign2" type="Node" parent="Folder_Sign"]
 
-[node name="Sign3" parent="Folder_Sign/Sign2" instance=ExtResource("16_fndq5")]
+[node name="Sign3" parent="Folder_Sign/Sign2" instance=ExtResource("17_86lf8")]
 position = Vector2(-40, -23)
 label_node = NodePath("../Sign Text")
 
-[node name="Sign Text" parent="Folder_Sign/Sign2" instance=ExtResource("3_iiqbh")]
+[node name="Sign Text" parent="Folder_Sign/Sign2" instance=ExtResource("3_woxbm")]
 offset_left = -84.0
 offset_top = -46.0
 offset_right = 4.0
@@ -1367,11 +1367,11 @@ text = "WASD to Move "
 
 [node name="Sign4" type="Node" parent="Folder_Sign"]
 
-[node name="Sign3" parent="Folder_Sign/Sign4" instance=ExtResource("16_fndq5")]
+[node name="Sign3" parent="Folder_Sign/Sign4" instance=ExtResource("17_86lf8")]
 position = Vector2(-24, 57)
 label_node = NodePath("../Sign Text")
 
-[node name="Sign Text" parent="Folder_Sign/Sign4" instance=ExtResource("3_iiqbh")]
+[node name="Sign Text" parent="Folder_Sign/Sign4" instance=ExtResource("3_woxbm")]
 offset_left = -68.0
 offset_top = 34.0
 offset_right = 20.0
@@ -1380,11 +1380,11 @@ text = "Try not to Die to the Slimes..."
 
 [node name="Sign5" type="Node" parent="Folder_Sign"]
 
-[node name="Sign3" parent="Folder_Sign/Sign5" instance=ExtResource("16_fndq5")]
+[node name="Sign3" parent="Folder_Sign/Sign5" instance=ExtResource("17_86lf8")]
 position = Vector2(440, -135)
 label_node = NodePath("../Sign Text")
 
-[node name="Sign Text" parent="Folder_Sign/Sign5" instance=ExtResource("3_iiqbh")]
+[node name="Sign Text" parent="Folder_Sign/Sign5" instance=ExtResource("3_woxbm")]
 offset_left = 396.0
 offset_top = -158.0
 offset_right = 484.0
@@ -1393,11 +1393,11 @@ text = "Have Fun Exploring!"
 
 [node name="Sign6" type="Node" parent="Folder_Sign"]
 
-[node name="Sign3" parent="Folder_Sign/Sign6" instance=ExtResource("16_fndq5")]
+[node name="Sign3" parent="Folder_Sign/Sign6" instance=ExtResource("17_86lf8")]
 position = Vector2(920, 9)
 label_node = NodePath("../Sign Text")
 
-[node name="Sign Text" parent="Folder_Sign/Sign6" instance=ExtResource("3_iiqbh")]
+[node name="Sign Text" parent="Folder_Sign/Sign6" instance=ExtResource("3_woxbm")]
 offset_left = 876.0
 offset_top = -14.0
 offset_right = 964.0
@@ -1407,36 +1407,36 @@ text = "Created By Highlighter56"
 [node name="Sign7" type="Node2D" parent="Folder_Sign"]
 position = Vector2(-104, -215)
 
-[node name="Sign3" parent="Folder_Sign/Sign7" instance=ExtResource("2_xmfaa")]
+[node name="Sign3" parent="Folder_Sign/Sign7" instance=ExtResource("2_1d6cw")]
 label_node = NodePath("../Sign Text")
 
-[node name="Sign Text" parent="Folder_Sign/Sign7" instance=ExtResource("3_iiqbh")]
+[node name="Sign Text" parent="Folder_Sign/Sign7" instance=ExtResource("3_woxbm")]
 text = "Press E to interact with the Door"
 
 [node name="Folder_ButtonANDBlock" type="Node" parent="."]
 
 [node name="Group1" type="Node" parent="Folder_ButtonANDBlock"]
 
-[node name="Button" parent="Folder_ButtonANDBlock/Group1" instance=ExtResource("17_wwpdr")]
+[node name="Button" parent="Folder_ButtonANDBlock/Group1" instance=ExtResource("18_p3oy1")]
 position = Vector2(40, -32)
 
-[node name="ButtonBlock" parent="Folder_ButtonANDBlock/Group1" instance=ExtResource("18_mwahi")]
+[node name="ButtonBlock" parent="Folder_ButtonANDBlock/Group1" instance=ExtResource("19_ley3b")]
 position = Vector2(-8, -56)
 source_path = NodePath("../Button")
 
-[node name="ButtonBlock2" parent="Folder_ButtonANDBlock/Group1" instance=ExtResource("18_mwahi")]
+[node name="ButtonBlock2" parent="Folder_ButtonANDBlock/Group1" instance=ExtResource("19_ley3b")]
 position = Vector2(-8, -71)
 source_path = NodePath("../Button")
 
-[node name="ButtonBlock4" parent="Folder_ButtonANDBlock/Group1" instance=ExtResource("18_mwahi")]
+[node name="ButtonBlock4" parent="Folder_ButtonANDBlock/Group1" instance=ExtResource("19_ley3b")]
 position = Vector2(-8, -103)
 source_path = NodePath("../Button")
 
-[node name="ButtonBlock6" parent="Folder_ButtonANDBlock/Group1" instance=ExtResource("18_mwahi")]
+[node name="ButtonBlock6" parent="Folder_ButtonANDBlock/Group1" instance=ExtResource("19_ley3b")]
 position = Vector2(-8, -87)
 source_path = NodePath("../Button")
 
-[node name="ButtonBlock5" parent="Folder_ButtonANDBlock/Group1" instance=ExtResource("18_mwahi")]
+[node name="ButtonBlock5" parent="Folder_ButtonANDBlock/Group1" instance=ExtResource("19_ley3b")]
 position = Vector2(-8, -119)
 source_path = NodePath("../Button")
 

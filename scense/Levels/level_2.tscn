@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://tbt34fl4nj2k" path="res://scense/sign_text.tscn" id="19_4lj6o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xvjj0"]
-size = Vector2(146, 93)
+size = Vector2(146, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cldao"]
 texture = ExtResource("2_oneaj")
@@ -1065,7 +1065,7 @@ position = Vector2(-872, -208)
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GameManager/Win_Zone"]
-position = Vector2(-871, -239.5)
+position = Vector2(-871, -197)
 shape = SubResource("RectangleShape2D_xvjj0")
 
 [node name="delay1" type="Timer" parent="GameManager"]
