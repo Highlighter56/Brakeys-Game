@@ -3,7 +3,7 @@ extends Area2D
 @onready var hurt = $Hurt
 
 func _on_body_entered(body):
-	print("You Died")
+	#print("You Died")
 	hurt.play()
 	body.hasDied()
 	Engine.time_scale = 0.5
