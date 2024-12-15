@@ -77,7 +77,7 @@ script = ExtResource("1_0tdem")
 position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_yj71o")
 animation = &"Default"
-frame_progress = 0.892538
+frame_progress = 0.892951
 
 [node name="ButtonHitbox" type="CollisionShape2D" parent="."]
 position = Vector2(0, -2)
