@@ -584,7 +584,7 @@ _data = {
 "rise": SubResource("Animation_akvk3")
 }
 
-[node name="level_3" type="Node2D"]
+[node name="level3" type="Node2D"]
 
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
@@ -594,6 +594,7 @@ script = ExtResource("1_8lepx")
 position = Vector2(120, 352)
 
 [node name="Player" parent="." instance=ExtResource("1_av7of")]
+unique_name_in_owner = true
 z_index = 5
 position = Vector2(344, 361)
 
