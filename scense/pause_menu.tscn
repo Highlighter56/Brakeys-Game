@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://tu4uvlgsm67r"]
+[gd_scene load_steps=4 format=3 uid="uid://tu4uvlgsm67r"]
 
 [ext_resource type="Script" path="res://scripts/pauseMenu.gd" id="1_o102w"]
 [ext_resource type="FontFile" uid="uid://bc61wi8n6vb0i" path="res://assests/fonts/PixelOperator8.ttf" id="2_25ujx"]
+[ext_resource type="Texture2D" uid="uid://cuw52a0l88qyn" path="res://assests/sprites/Star.png" id="3_jlwqx"]
 
 [node name="PauseMenu" type="Control"]
 layout_mode = 3
@@ -76,6 +77,13 @@ text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Star_1" type="Sprite2D" parent="Level_Select/Level_Grouping/Level_One_Button"]
+position = Vector2(33.3333, 3.33333)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_jlwqx")
+region_enabled = true
+region_rect = Rect2(64, 32, 32, 32)
+
 [node name="Level_Two_Button" type="Button" parent="Level_Select/Level_Grouping"]
 offset_left = -26.0
 offset_top = -22.0
@@ -105,6 +113,13 @@ text = "2
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Star_2" type="Sprite2D" parent="Level_Select/Level_Grouping/Level_Two_Button"]
+position = Vector2(33.3333, 3.33333)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_jlwqx")
+region_enabled = true
+region_rect = Rect2(64, 32, 32, 32)
+
 [node name="Level_Three_Button" type="Button" parent="Level_Select/Level_Grouping"]
 offset_left = 74.0
 offset_top = -22.0
@@ -133,6 +148,13 @@ text = "3
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Star_3" type="Sprite2D" parent="Level_Select/Level_Grouping/Level_Three_Button"]
+position = Vector2(33.3333, 3.33333)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_jlwqx")
+region_enabled = true
+region_rect = Rect2(64, 32, 32, 32)
 
 [node name="Main_Menu_Button" type="Button" parent="Level_Select"]
 anchors_preset = 8

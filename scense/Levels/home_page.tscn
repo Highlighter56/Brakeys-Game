@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dt6acoj8utxru"]
+[gd_scene load_steps=32 format=3 uid="uid://dt6acoj8utxru"]
 
 [ext_resource type="Texture2D" uid="uid://d4g075fhb8c42" path="res://assests/sprites/world_tileset2.png" id="1_24bya"]
 [ext_resource type="Script" path="res://scripts/home_page.gd" id="1_70r2j"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://6obn1y4a62rh" path="res://assests/sprites/knight.png" id="4_pe6xp"]
 [ext_resource type="Texture2D" uid="uid://bkq7lcnrfdsdo" path="res://assests/sprites/Cloud.png" id="5_0do4a"]
 [ext_resource type="FontFile" uid="uid://bc61wi8n6vb0i" path="res://assests/fonts/PixelOperator8.ttf" id="10_vb1hm"]
+[ext_resource type="Texture2D" uid="uid://cuw52a0l88qyn" path="res://assests/sprites/Star.png" id="11_gr7to"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_isg3c"]
 texture = ExtResource("1_rbflb")
@@ -2114,6 +2115,13 @@ text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Star_1" type="Sprite2D" parent="Folder_UI/Level_Select/Level_Grouping/Level_One_Button"]
+position = Vector2(33.3333, 3.33333)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_gr7to")
+region_enabled = true
+region_rect = Rect2(64, 32, 32, 32)
+
 [node name="Level_Two_Button" type="Button" parent="Folder_UI/Level_Select/Level_Grouping"]
 offset_left = -26.0
 offset_top = -22.0
@@ -2143,6 +2151,13 @@ text = "2
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Star_2" type="Sprite2D" parent="Folder_UI/Level_Select/Level_Grouping/Level_Two_Button"]
+position = Vector2(33.3333, 3.33333)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_gr7to")
+region_enabled = true
+region_rect = Rect2(64, 32, 32, 32)
+
 [node name="Level_Three_Button" type="Button" parent="Folder_UI/Level_Select/Level_Grouping"]
 offset_left = 74.0
 offset_top = -22.0
@@ -2171,6 +2186,13 @@ text = "3
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Star_3" type="Sprite2D" parent="Folder_UI/Level_Select/Level_Grouping/Level_Three_Button"]
+position = Vector2(33.3333, 3.33333)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_gr7to")
+region_enabled = true
+region_rect = Rect2(64, 32, 32, 32)
 
 [node name="Main_Menu_Button" type="Button" parent="Folder_UI/Level_Select"]
 anchors_preset = 8

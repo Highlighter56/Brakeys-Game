@@ -32,22 +32,23 @@ func _process(delta):
 	# this here instead of in the _physics_process because I want to leave that for 
 	# physics, and this should be being called more frequently anyways, so this will 
 	# work
-	if(!isDead):
-		if(!is_on_floor()):
-			if(velocity.y >= 0):
-				currentState = state.FALLING
-				if(is_on_wall() and direction != 0):
-					currentState = state.SLIDING
+	if(!levelComplete):
+		if(!isDead):
+			if(!is_on_floor()):
+				if(velocity.y >= 0):
+					currentState = state.FALLING
+					if(is_on_wall() and direction != 0):
+						currentState = state.SLIDING
+				else:
+					currentState = state.JUMPING
 			else:
-				currentState = state.JUMPING
+				if(direction == 0):
+					currentState = state.IDLE
+				else:
+					currentState = state.RUNNING
 		else:
-			if(direction == 0):
-				currentState = state.IDLE
-			else:
-				currentState = state.RUNNING
+			currentState = state.DEAD
 	else:
-		currentState = state.DEAD
-	if(levelComplete):
 		currentState = state.COMPLETE
 	#print(currentState)
 
@@ -106,21 +107,21 @@ func _physics_process(delta):
 				jump.play()
 				velocity.y = JUMP_VELOCITY
 	
-	# Handles Player Controls and Disables Controls when Dead
-	if(!isDead):
-		# Flips Direction of Character
-		if(direction>0):
-			animated_sprite_2d.flip_h = false
-		elif(direction<0):
-			animated_sprite_2d.flip_h = true
-		
-		# Applys Movment / Sets Velocity
-		if(direction):
-			velocity.x = direction * SPEED
-		else:
-# move_towards(From, To, Delta) : will add/subtract delta to from in the direction to reach to
-# Note: this is a different Delta than the parameter for the _physics_process() method
-			velocity.x = move_toward(velocity.x, 0, SPEED)
+		# Handles Player Controls and Disables Controls when Dead
+		if(!isDead):
+			# Flips Direction of Character
+			if(direction>0):
+				animated_sprite_2d.flip_h = false
+			elif(direction<0):
+				animated_sprite_2d.flip_h = true
+			
+			# Applys Movment / Sets Velocity
+			if(direction):
+				velocity.x = direction * SPEED
+			else:
+	# move_towards(From, To, Delta) : will add/subtract delta to from in the direction to reach to
+	# Note: this is a different Delta than the parameter for the _physics_process() method
+				velocity.x = move_toward(velocity.x, 0, SPEED)
 		
 # move_and_slide() moves the node based on its set velocity
 	move_and_slide()

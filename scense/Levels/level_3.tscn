@@ -1060,6 +1060,22 @@ offset_right = 1262.0
 offset_bottom = 387.0
 text = "Have a second layer of water to make it more visualy interesting"
 
+[node name="Sign Text5" parent="Folder_Ideas" instance=ExtResource("5_3va0q")]
+offset_left = 641.0
+offset_top = 22.0
+offset_right = 729.0
+offset_bottom = 338.0
+text = "Things to Fix/Add
+
+Fix all doors on all levels
+
+Add Something on the home page to show you beat a certain level
+ - add something for if you beat all levels / credits
+
+Astetic Changes to levels
+
+Add a script to each camera to scale its zoom based on resolution/screen size"
+
 [node name="ButtonANDBlocks" type="Node" parent="."]
 
 [node name="Button" parent="ButtonANDBlocks" instance=ExtResource("18_vh1vi")]

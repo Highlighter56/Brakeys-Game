@@ -30,10 +30,17 @@ func _process(delta):
 
 # Plays Animation Swquence for Animation Player
 func animation_open_door():
+	animation_player.play("Open_Door_Animation")
+	open_door_helper()
+func open_door_helper():
 	animated_sprite_2d.play("open_door")
-func animation_close_door():
-	animated_sprite_2d.play("close_door")
 
+func animation_close_door():
+	animation_player.play("Close_Door_Animation")
+	close_door_helper()
+func close_door_helper():
+	animated_sprite_2d.play("close_door")
+	
 # Unlocks Interactability
 func _on_animated_sprite_2d_animation_finished():
 	isAnimating = !isAnimating
