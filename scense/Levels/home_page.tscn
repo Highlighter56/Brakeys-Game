@@ -2116,6 +2116,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Star_1" type="Sprite2D" parent="Folder_UI/Level_Select/Level_Grouping/Level_One_Button"]
+unique_name_in_owner = true
 position = Vector2(33.3333, 3.33333)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("11_gr7to")
@@ -2152,6 +2153,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Star_2" type="Sprite2D" parent="Folder_UI/Level_Select/Level_Grouping/Level_Two_Button"]
+unique_name_in_owner = true
 position = Vector2(33.3333, 3.33333)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("11_gr7to")
@@ -2188,6 +2190,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Star_3" type="Sprite2D" parent="Folder_UI/Level_Select/Level_Grouping/Level_Three_Button"]
+unique_name_in_owner = true
 position = Vector2(33.3333, 3.33333)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("11_gr7to")

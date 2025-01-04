@@ -12,7 +12,6 @@ var movePlayer = false
 var playerDirection
 
 signal levelComplete
-signal endSceneComplete
 
 func _ready():
 	pass
@@ -76,8 +75,11 @@ func _on_delay_2_timeout():
 	delay_3.start()
 func _on_delay_3_timeout():
 	#print("Timer 3: LEAVE LEVEL 2 NOW")
+	# This access the LCT, and then updates the completion state
+	get_node("/root/LevelComplitionTracker").completedLevelTwo = true
 	get_tree().change_scene_to_file("res://scense/Levels/home_page.tscn")
 
 func _on_delay_4_timeout():
 	#print("Timer 4: Fail Safe")
+	get_node("/root/LevelComplitionTracker").completedLevelTwo = true
 	get_tree().change_scene_to_file("res://scense/Levels/home_page.tscn")

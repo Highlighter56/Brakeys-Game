@@ -3,9 +3,23 @@ extends Control
 #@onready var player = %Player
 
 var paused = false
+@onready var star_1 = %Star_1
+@onready var star_2 = %Star_2
+@onready var star_3 = %Star_3
+
 
 func _ready():
 	visible = false
+	# Star Visibility
+	star_1.visible = false
+	star_2.visible = false
+	star_3.visible = false
+	if(get_node("/root/LevelComplitionTracker").getCompletedLevelOne()):
+		star_1.visible = true
+	if(get_node("/root/LevelComplitionTracker").getCompletedLevelTwo()):
+		star_2.visible = true
+	if(get_node("/root/LevelComplitionTracker").getCompletedLevelThree()):
+		star_3.visible = true
 
 func _process(delta):
 	#if Input.is_action_just_pressed("ui_cancel"):
