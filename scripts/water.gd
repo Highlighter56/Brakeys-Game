@@ -2,7 +2,7 @@ extends Node2D
 
 var SPEED = 15
 var leftBound = -512
-@export var rightBound = (512-16)*4 # = 1984
+@export var rightBound = (512-16)*7 # = 3472
 # the -16 is to force overlap, to avoid blank spaces
 
 func _ready():
