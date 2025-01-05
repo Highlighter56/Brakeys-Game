@@ -710,7 +710,7 @@ one_shot = true
 [node name="Player" parent="." instance=ExtResource("1_av7of")]
 unique_name_in_owner = true
 z_index = 5
-position = Vector2(922, 87)
+position = Vector2(382, 363)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 z_index = 10
@@ -1070,20 +1070,24 @@ offset_bottom = 387.0
 text = "Have a second layer of water to make it more visualy interesting"
 
 [node name="Sign Text5" parent="Folder_Ideas" instance=ExtResource("5_3va0q")]
-offset_left = 641.0
-offset_top = 22.0
-offset_right = 729.0
-offset_bottom = 338.0
+offset_left = 645.0
+offset_top = 61.0
+offset_right = 907.0
+offset_bottom = 377.0
 text = "Things to Fix/Add
 
-Fix all doors on all levels
-
-Add Something on the home page to show you beat a certain level
- - add something for if you beat all levels / credits
+Add Credits once you finsih all three levels
 
 Astetic Changes to levels
+ - in levle 3 make it so the cave part has a cave background - because im not sure if I want it or not, make it as another backgroun layer just to test
 
-Add a script to each camera to scale its zoom based on resolution/screen size"
+Add a script to each camera to scale its zoom based on resolution/screen size
+
+When you complete a level and go back to the home page, make it so you appear on the level selection page
+
+Finish water on level 3
+
+validation run"
 
 [node name="ButtonANDBlocks" type="Node" parent="."]
 

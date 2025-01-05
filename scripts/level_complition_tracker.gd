@@ -4,6 +4,8 @@ var completedLevelOne = false
 var completedLevelTwo = false
 var completedLevelThree = false
 
+var gameStarted:bool = false
+
 func _ready():
 	pass
 

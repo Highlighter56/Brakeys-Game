@@ -9,8 +9,15 @@ enum menus {QUIT, HOME, PLAY}
 var currentMenu
 
 func _ready():
-	currentMenu = menus.HOME
-	#print(384*(currentMenu-1))
+	# Handels after beating a level and going bakc to the home page, being on the level
+	# select screen
+	if(get_node("/root/LevelComplitionTracker").gameStarted):
+		currentMenu = menus.PLAY
+		ui.position.x = -385
+	else:
+		currentMenu = menus.HOME
+		get_node("/root/LevelComplitionTracker").gameStarted = true
+	
 	# Star Visibility
 	star_1.visible = false
 	star_2.visible = false
@@ -29,17 +36,17 @@ func _process(delta):
 	# Switch Menus
 	match currentMenu:
 		menus.PLAY:
-			if(ui.position.x > -384):
+			if(ui.position.x != -385):
 				#print("Moving to PLAY")
-				ui.position.x-=5
+				ui.position.x = move_toward(ui.position.x,-385,5)
 		menus.HOME:
 			if(ui.position.x != 0):
 				#print("Moving to HOME")
 				ui.position.x = move_toward(ui.position.x, 0, 5)
 		menus.QUIT:
-			if(ui.position.x < 384):
+			if(ui.position.x != 385):
 				#print("Moving to QUIT")
-				ui.position.x+=5
+				ui.position.x = move_toward(ui.position.x,385,5)
 
 func _physics_process(delta):
 	pass
