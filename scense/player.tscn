@@ -244,7 +244,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pm1uc"]
-radius = 5.0
+radius = 6.0
 height = 15.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u33fr"]
@@ -261,11 +261,11 @@ script = ExtResource("1_c7sup")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -12)
 sprite_frames = SubResource("SpriteFrames_7m3qj")
-animation = &"jump"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -7.5)
+position = Vector2(0, -8.5)
 shape = SubResource("CapsuleShape2D_pm1uc")
 
 [node name="Jump" type="AudioStreamPlayer2D" parent="."]

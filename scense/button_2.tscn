@@ -149,7 +149,7 @@ shape = SubResource("CircleShape2D_twk4o")
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
-position = Vector2(0, -5)
+position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_ywlpq")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

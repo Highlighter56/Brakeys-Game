@@ -18,3 +18,6 @@ func getCompletedLevelTwo() -> bool:
 	return completedLevelTwo
 func getCompletedLevelThree() -> bool:
 	return completedLevelThree
+
+func hasCompletedAllLevels() -> bool:
+	return completedLevelOne and completedLevelTwo and completedLevelThree

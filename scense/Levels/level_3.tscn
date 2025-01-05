@@ -713,7 +713,6 @@ z_index = 5
 position = Vector2(382, 363)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-z_index = 10
 offset = Vector2(0, -10)
 zoom = Vector2(4, 4)
 limit_bottom = 435
@@ -1082,8 +1081,6 @@ Astetic Changes to levels
  - in levle 3 make it so the cave part has a cave background - because im not sure if I want it or not, make it as another backgroun layer just to test
 
 Add a script to each camera to scale its zoom based on resolution/screen size
-
-When you complete a level and go back to the home page, make it so you appear on the level selection page
 
 Finish water on level 3
 

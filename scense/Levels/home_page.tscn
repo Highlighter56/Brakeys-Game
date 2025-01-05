@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dt6acoj8utxru"]
+[gd_scene load_steps=33 format=3 uid="uid://dt6acoj8utxru"]
 
 [ext_resource type="Texture2D" uid="uid://d4g075fhb8c42" path="res://assests/sprites/world_tileset2.png" id="1_24bya"]
 [ext_resource type="Script" path="res://scripts/home_page.gd" id="1_70r2j"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bkq7lcnrfdsdo" path="res://assests/sprites/Cloud.png" id="5_0do4a"]
 [ext_resource type="FontFile" uid="uid://bc61wi8n6vb0i" path="res://assests/fonts/PixelOperator8.ttf" id="10_vb1hm"]
 [ext_resource type="Texture2D" uid="uid://cuw52a0l88qyn" path="res://assests/sprites/Star.png" id="11_gr7to"]
+[ext_resource type="FontFile" uid="uid://djj151oji6302" path="res://assests/fonts/PixelOperator8-Bold.ttf" id="12_djna6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_isg3c"]
 texture = ExtResource("1_rbflb")
@@ -1879,6 +1880,7 @@ autoplay = "default"
 [node name="Folder_Clouds" type="Node2D" parent="."]
 
 [node name="DisplayCloud" type="Sprite2D" parent="Folder_Clouds"]
+unique_name_in_owner = true
 visible = false
 z_index = 1
 position = Vector2(-237, -71)
@@ -1893,6 +1895,7 @@ libraries = {
 autoplay = "drift"
 
 [node name="DisplayCloud2" type="Sprite2D" parent="Folder_Clouds"]
+unique_name_in_owner = true
 visible = false
 position = Vector2(-237, -71)
 texture = ExtResource("5_0do4a")
@@ -1906,6 +1909,7 @@ libraries = {
 autoplay = "drift2"
 
 [node name="DisplayCloud3" type="Sprite2D" parent="Folder_Clouds"]
+unique_name_in_owner = true
 visible = false
 z_index = 2
 position = Vector2(-237, -71)
@@ -1935,7 +1939,6 @@ unique_name_in_owner = true
 z_index = 2
 
 [node name="Home_Screen" type="Node2D" parent="Folder_UI"]
-position = Vector2(0, 2)
 
 [node name="Title" type="Node2D" parent="Folder_UI/Home_Screen"]
 position = Vector2(0, -37)
@@ -2031,7 +2034,43 @@ text = "Quit
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Settings_Button" type="Button" parent="Folder_UI/Home_Screen"]
+[node name="Credits_Button" type="Button" parent="Folder_UI/Home_Screen"]
+unique_name_in_owner = true
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -73.0
+offset_top = 65.0
+offset_right = 72.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("10_vb1hm")
+theme_override_font_sizes/font_size = 16
+
+[node name="Label" type="Label" parent="Folder_UI/Home_Screen/Credits_Button"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.0
+offset_top = -11.5
+offset_right = 31.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("10_vb1hm")
+theme_override_font_sizes/font_size = 24
+text = "Credits
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Settings_Button" type="Button" parent="Folder_UI"]
 visible = false
 offset_left = -133.0
 offset_top = 6.0
@@ -2040,7 +2079,7 @@ offset_bottom = 33.0
 theme_override_fonts/font = ExtResource("10_vb1hm")
 theme_override_font_sizes/font_size = 12
 
-[node name="Label2" type="Label" parent="Folder_UI/Home_Screen/Settings_Button"]
+[node name="Label2" type="Label" parent="Folder_UI/Settings_Button"]
 layout_mode = 0
 offset_left = 1.0
 offset_top = 8.0
@@ -2335,15 +2374,85 @@ text = "Yes
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Credits" type="Node2D" parent="Folder_UI"]
+position = Vector2(0, -216)
+
+[node name="Congraulations" type="Node2D" parent="Folder_UI/Credits"]
+position = Vector2(0, -21)
+
+[node name="Brackground" type="Polygon2D" parent="Folder_UI/Credits/Congraulations"]
+position = Vector2(-92, -55)
+scale = Vector2(12.2427, 4.20267)
+color = Color(0, 0, 0, 0.490196)
+polygon = PackedVector2Array(-7, 2, -6.04028, 1, 21, 1, 22, 2, 23, 3, 23, 21.6676, 22, 23, 21, 24, -6, 24, -7, 23, -8, 22, -8, 3)
+
+[node name="Text" type="Label" parent="Folder_UI/Credits/Congraulations"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -130.5
+offset_top = -39.0
+offset_right = 130.5
+offset_bottom = 39.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("12_djna6")
+theme_override_font_sizes/font_size = 16
+text = "Congratulations you Win!!!
+
+Thank you for Playing and
+Hope you had Fun!!! :)"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="to_main_menu" type="Button" parent="Folder_UI/Credits"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.0
+offset_top = 43.0
+offset_right = 98.0
+offset_bottom = 74.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("10_vb1hm")
+theme_override_font_sizes/font_size = 16
+
+[node name="Label" type="Label" parent="Folder_UI/Credits/to_main_menu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -31.0
+offset_top = -11.5
+offset_right = 31.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("10_vb1hm")
+theme_override_font_sizes/font_size = 24
+text = "Main Menu
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Settings_Menu" type="Node2D" parent="Folder_UI"]
 visible = false
 position = Vector2(0, 216)
 
 [connection signal="pressed" from="Folder_UI/Home_Screen/Play_Button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Folder_UI/Home_Screen/Quit_Button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Folder_UI/Home_Screen/Credits_Button" to="." method="_on_credits_button_pressed"]
 [connection signal="pressed" from="Folder_UI/Level_Select/Level_Grouping/Level_One_Button" to="." method="_on_level_one_button_pressed"]
 [connection signal="pressed" from="Folder_UI/Level_Select/Level_Grouping/Level_Two_Button" to="." method="_on_level_two_button_pressed"]
 [connection signal="pressed" from="Folder_UI/Level_Select/Level_Grouping/Level_Three_Button" to="." method="_on_level_three_button_pressed"]
 [connection signal="pressed" from="Folder_UI/Level_Select/Main_Menu_Button" to="." method="_on_main_menu_button_pressed"]
 [connection signal="pressed" from="Folder_UI/Quit_Screen/Quit_No" to="." method="_on_quit_no_pressed"]
 [connection signal="pressed" from="Folder_UI/Quit_Screen/Quit_Yes" to="." method="_on_quit_yes_pressed"]
+[connection signal="pressed" from="Folder_UI/Credits/to_main_menu" to="." method="_on_to_main_menu_pressed"]
