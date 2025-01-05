@@ -55,6 +55,7 @@ func _process(delta):
 
 # Gets called consintently, so physics works as it should (by default 60 tiems per second)
 func _physics_process(delta):
+	#print(levelComplete)
 	
 	#print("Current:" + str(currentState))
 	match currentState:
@@ -94,6 +95,7 @@ func _physics_process(delta):
 			velocity.x = 0
 			move_and_slide()
 	
+	
 # This should cause it so that once the level is complete, player controls are disabled
 	if(!levelComplete):
 		# Handles Direction
@@ -128,5 +130,5 @@ func _physics_process(delta):
 
 
 func _on_game_manager_level_complete():
+	#print("player")
 	levelComplete = true
-	

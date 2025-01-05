@@ -696,7 +696,16 @@ unique_name_in_owner = true
 script = ExtResource("1_8lepx")
 
 [node name="Door2" parent="GameManager" instance=ExtResource("2_bvexx")]
+unique_name_in_owner = true
 position = Vector2(872, 129)
+
+[node name="DoorDelay1" type="Timer" parent="GameManager"]
+wait_time = 2.0
+one_shot = true
+
+[node name="DoorDelay2" type="Timer" parent="GameManager"]
+wait_time = 2.0
+one_shot = true
 
 [node name="Player" parent="." instance=ExtResource("1_av7of")]
 unique_name_in_owner = true
@@ -1121,7 +1130,10 @@ source_path = NodePath("../Button")
 position = Vector2(1208, 120)
 source_path = NodePath("../Button")
 
-[connection signal="level_complete" from="GameManager" to="GameManager/Door2" method="_on_game_manager_level_complete"]
+[connection signal="levelComplete" from="GameManager" to="Player" method="_on_game_manager_level_complete"]
+[connection signal="triggeringLevelCompletion" from="GameManager/Door2" to="GameManager" method="_on_door_2_triggering_level_completion"]
+[connection signal="timeout" from="GameManager/DoorDelay1" to="GameManager" method="_on_door_delay_1_timeout"]
+[connection signal="timeout" from="GameManager/DoorDelay2" to="GameManager" method="_on_door_delay_2_timeout"]
 [connection signal="timeout" from="Player/Camera2D/Rise Shake Timer" to="Player/Camera2D" method="_on_rise_shake_timer_timeout"]
 [connection signal="timeout" from="Player/Camera2D/Sink Shake Timer" to="Player/Camera2D" method="_on_sink_shake_timer_timeout"]
 [connection signal="shakeScreenRise" from="platform_Big" to="Player/Camera2D" method="_on_platform_big_shake_screen_rise"]

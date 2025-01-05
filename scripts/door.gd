@@ -10,6 +10,7 @@ extends Node2D
 @onready var error = $error
 
 signal canNotAccess
+signal triggerLevelComplete
 
 # False=Closed	Ture=Opem
 var state = false
@@ -31,6 +32,8 @@ func _process(delta):
 						doorClose3()
 					else:
 						doorOpen()
+						#print("door")
+						triggerLevelComplete.emit()
 					state=!state
 				else:
 					erroring=true
@@ -45,7 +48,7 @@ func doorOpen():
 
 func doorClose3():
 	animating = true
-	tap.play()
+	#tap.play()
 	animated_sprite_2d.play("PartClose")
 	delay_close_sound.start()
 

@@ -36,6 +36,18 @@ tracks/1/keys = {
 "method": &"close_door_helper"
 }]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("tap:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_e54nf"]
 resource_name = "Open_Door_Animation"
@@ -66,6 +78,18 @@ tracks/1/keys = {
 "method": &"open_door_helper"
 }]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("tap:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_mmf7h"]
 length = 0.001
@@ -88,6 +112,18 @@ tracks/1/path = NodePath("sound_open_door:playing")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("tap:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -248,7 +284,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_logf1"]
-size = Vector2(54, 32)
+size = Vector2(28, 4)
 
 [node name="Door2" type="Node2D"]
 script = ExtResource("1_kvdsq")
@@ -276,12 +312,13 @@ bus = &"Effects"
 
 [node name="tap" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_5vs1o")
-bus = &"Player"
+bus = &"Effects"
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 14)
 shape = SubResource("RectangleShape2D_logf1")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

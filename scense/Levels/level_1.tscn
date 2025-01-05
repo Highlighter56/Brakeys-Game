@@ -1026,6 +1026,7 @@ theme_override_fonts/font = ExtResource("4_ssi68")
 text = "Collect All The Coins!"
 
 [node name="Door" parent="GameManager" instance=ExtResource("5_wgqe4")]
+unique_name_in_owner = true
 position = Vector2(-48, -176)
 
 [node name="Firework1" parent="GameManager" instance=ExtResource("6_m7twi")]
@@ -1052,6 +1053,14 @@ xEnd = 3
 yEnd = -35
 time = 1.2
 
+[node name="DoorDelay1" type="Timer" parent="GameManager"]
+wait_time = 2.0
+one_shot = true
+
+[node name="DoorDelay2" type="Timer" parent="GameManager"]
+wait_time = 2.0
+one_shot = true
+
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_j6tue")
 format = 2
@@ -1062,7 +1071,7 @@ layer_1/tile_data = PackedInt32Array(131066, 0, 1, 131067, 0, 0, 131068, 0, 0, 1
 
 [node name="Player" parent="." instance=ExtResource("9_mkvtt")]
 unique_name_in_owner = true
-position = Vector2(-59, 14)
+position = Vector2(-70, 8)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -6)
@@ -1360,7 +1369,7 @@ offset_left = -214.0
 offset_top = -133.0
 offset_right = -126.0
 offset_bottom = -88.0
-text = "Your Goal is to Collect all the Coins, then reach the end!"
+text = "Your Goal is to Collect all the Coins, then reach the Door!"
 metadata/_edit_use_anchors_ = true
 
 [node name="Sign2" type="Node" parent="Folder_Sign"]
@@ -1451,5 +1460,9 @@ source_path = NodePath("../Button")
 position = Vector2(-8, -119)
 source_path = NodePath("../Button")
 
+[connection signal="levelComplete" from="GameManager" to="Player" method="_on_game_manager_level_complete"]
 [connection signal="canNotAccess" from="GameManager/Door" to="Player/Camera2D" method="_on_door_can_not_access"]
+[connection signal="triggerLevelComplete" from="GameManager/Door" to="GameManager" method="_on_door_trigger_level_complete"]
+[connection signal="timeout" from="GameManager/DoorDelay1" to="GameManager" method="_on_door_delay_1_timeout"]
+[connection signal="timeout" from="GameManager/DoorDelay2" to="GameManager" method="_on_door_delay_2_timeout"]
 [connection signal="timeout" from="Player/Camera2D/Timer" to="Player/Camera2D" method="_on_timer_timeout"]

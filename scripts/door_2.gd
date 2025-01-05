@@ -2,9 +2,11 @@ extends Node2D
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
 @onready var animation_player = $AnimationPlayer
+@onready var game_manager = %GameManager
 
 signal hasOpened
 signal doorIsDoneOpening
+signal triggeringLevelCompletion
 
 var isClosed = true
 var isAnimating = false
@@ -20,12 +22,10 @@ func _process(delta):
 		isAnimating = !isAnimating
 		if(isClosed):
 			#print("Door Opens")
-			animation_player.play("Open_Door_Animation")
-			isClosed = false
+			doorOpenFunction()
 		else:
 			#print("Door Closes")
-			animation_player.play("Close_Door_Animation")
-			isClosed = true
+			doorCloseFunction()
 		#print(isClosed)
 
 # Plays Animation Swquence for Animation Player
@@ -34,13 +34,21 @@ func animation_open_door():
 	open_door_helper()
 func open_door_helper():
 	animated_sprite_2d.play("open_door")
+func doorOpenFunction():
+	animation_player.play("Open_Door_Animation")
+	isClosed = false
+	triggeringLevelCompletion.emit()
 
 func animation_close_door():
 	animation_player.play("Close_Door_Animation")
 	close_door_helper()
 func close_door_helper():
 	animated_sprite_2d.play("close_door")
-	
+func doorCloseFunction():
+	animation_player.play("Close_Door_Animation")
+	isClosed = true
+
+
 # Unlocks Interactability
 func _on_animated_sprite_2d_animation_finished():
 	isAnimating = !isAnimating
