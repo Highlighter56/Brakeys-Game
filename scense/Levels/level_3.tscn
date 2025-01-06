@@ -691,6 +691,9 @@ _data = {
 
 [node name="level3" type="Node2D"]
 
+[node name="PositionTester" type="Node2D" parent="."]
+position = Vector2(2749, 290)
+
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("1_8lepx")
@@ -715,6 +718,9 @@ position = Vector2(382, 363)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 offset = Vector2(0, -10)
 zoom = Vector2(4, 4)
+limit_left = 235
+limit_top = 0
+limit_right = 2750
 limit_bottom = 435
 limit_smoothed = true
 position_smoothing_enabled = true
@@ -815,6 +821,9 @@ position = Vector2(1112, 368)
 [node name="Sign_1" type="Node2D" parent="Folder_Sign"]
 position = Vector2(584, 313)
 
+[node name="Sign3" parent="Folder_Sign/Sign_1" instance=ExtResource("4_tav8h")]
+label_node = NodePath("../Sign Text")
+
 [node name="Sign Text" parent="Folder_Sign/Sign_1" instance=ExtResource("5_3va0q")]
 text = "Don't touch the water"
 
@@ -892,7 +901,7 @@ SPEED = 65
 [node name="Folder_Coins" type="Node" parent="."]
 
 [node name="8_Coin_Jump" type="Node2D" parent="Folder_Coins"]
-position = Vector2(80, 0)
+position = Vector2(80, -1)
 
 [node name="Coin" parent="Folder_Coins/8_Coin_Jump" instance=ExtResource("11_cb7sh")]
 position = Vector2(1284, 326)
@@ -944,6 +953,114 @@ position = Vector2(1338, 295)
 
 [node name="Coin8" parent="Folder_Coins/8_Coin_Jump2" instance=ExtResource("11_cb7sh")]
 position = Vector2(1326, 284)
+
+[node name="8_Coin_Jump3" type="Node2D" parent="Folder_Coins"]
+position = Vector2(596, -222)
+
+[node name="Coin" parent="Folder_Coins/8_Coin_Jump3" instance=ExtResource("11_cb7sh")]
+position = Vector2(1284, 326)
+
+[node name="Coin2" parent="Folder_Coins/8_Coin_Jump3" instance=ExtResource("11_cb7sh")]
+position = Vector2(1289, 310)
+
+[node name="Coin3" parent="Folder_Coins/8_Coin_Jump3" instance=ExtResource("11_cb7sh")]
+position = Vector2(1297, 295)
+
+[node name="Coin4" parent="Folder_Coins/8_Coin_Jump3" instance=ExtResource("11_cb7sh")]
+position = Vector2(1311, 284)
+
+[node name="Coin6" parent="Folder_Coins/8_Coin_Jump3" instance=ExtResource("11_cb7sh")]
+position = Vector2(1349, 310)
+
+[node name="Coin7" parent="Folder_Coins/8_Coin_Jump3" instance=ExtResource("11_cb7sh")]
+position = Vector2(1338, 295)
+
+[node name="Coin8" parent="Folder_Coins/8_Coin_Jump3" instance=ExtResource("11_cb7sh")]
+position = Vector2(1326, 284)
+
+[node name="8_Coin_Jump4" type="Node2D" parent="Folder_Coins"]
+position = Vector2(745, -240)
+
+[node name="Coin" parent="Folder_Coins/8_Coin_Jump4" instance=ExtResource("11_cb7sh")]
+position = Vector2(1284, 326)
+
+[node name="Coin2" parent="Folder_Coins/8_Coin_Jump4" instance=ExtResource("11_cb7sh")]
+position = Vector2(1289, 310)
+
+[node name="Coin3" parent="Folder_Coins/8_Coin_Jump4" instance=ExtResource("11_cb7sh")]
+position = Vector2(1297, 295)
+
+[node name="Coin4" parent="Folder_Coins/8_Coin_Jump4" instance=ExtResource("11_cb7sh")]
+position = Vector2(1311, 284)
+
+[node name="Coin6" parent="Folder_Coins/8_Coin_Jump4" instance=ExtResource("11_cb7sh")]
+position = Vector2(1349, 310)
+
+[node name="Coin7" parent="Folder_Coins/8_Coin_Jump4" instance=ExtResource("11_cb7sh")]
+position = Vector2(1338, 295)
+
+[node name="Coin8" parent="Folder_Coins/8_Coin_Jump4" instance=ExtResource("11_cb7sh")]
+position = Vector2(1326, 284)
+
+[node name="Coin9" parent="Folder_Coins" instance=ExtResource("11_cb7sh")]
+position = Vector2(1178, 172)
+
+[node name="Coin10" parent="Folder_Coins" instance=ExtResource("11_cb7sh")]
+position = Vector2(1143, 169)
+
+[node name="Coin11" parent="Folder_Coins" instance=ExtResource("11_cb7sh")]
+position = Vector2(1109, 166)
+
+[node name="Coin12" parent="Folder_Coins" instance=ExtResource("11_cb7sh")]
+position = Vector2(1075, 163)
+
+[node name="Coin13" parent="Folder_Coins" instance=ExtResource("11_cb7sh")]
+position = Vector2(1041, 159)
+
+[node name="Coin14" parent="Folder_Coins" instance=ExtResource("11_cb7sh")]
+position = Vector2(1007, 156)
+
+[node name="Coin15" parent="Folder_Coins" instance=ExtResource("11_cb7sh")]
+position = Vector2(1167, 171)
+
+[node name="Coin16" parent="Folder_Coins" instance=ExtResource("11_cb7sh")]
+position = Vector2(1132, 168)
+
+[node name="Coin17" parent="Folder_Coins" instance=ExtResource("11_cb7sh")]
+position = Vector2(1098, 165)
+
+[node name="Coin18" parent="Folder_Coins" instance=ExtResource("11_cb7sh")]
+position = Vector2(1064, 162)
+
+[node name="Coin19" parent="Folder_Coins" instance=ExtResource("11_cb7sh")]
+position = Vector2(1030, 158)
+
+[node name="Coin20" parent="Folder_Coins" instance=ExtResource("11_cb7sh")]
+position = Vector2(996, 155)
+
+[node name="Coin21" parent="Folder_Coins" instance=ExtResource("11_cb7sh")]
+position = Vector2(1155, 170)
+
+[node name="Coin22" parent="Folder_Coins" instance=ExtResource("11_cb7sh")]
+position = Vector2(1120, 167)
+
+[node name="Coin23" parent="Folder_Coins" instance=ExtResource("11_cb7sh")]
+position = Vector2(1086, 164)
+
+[node name="Coin24" parent="Folder_Coins" instance=ExtResource("11_cb7sh")]
+position = Vector2(1052, 160)
+
+[node name="Coin25" parent="Folder_Coins" instance=ExtResource("11_cb7sh")]
+position = Vector2(1018, 157)
+
+[node name="Coin26" parent="Folder_Coins" instance=ExtResource("11_cb7sh")]
+position = Vector2(984, 154)
+
+[node name="Coin27" parent="Folder_Coins" instance=ExtResource("11_cb7sh")]
+position = Vector2(973, 154)
+
+[node name="Coin28" parent="Folder_Coins" instance=ExtResource("11_cb7sh")]
+position = Vector2(961, 154)
 
 [node name="Folder_Clouds" type="Node2D" parent="."]
 z_index = 6
@@ -1095,6 +1212,7 @@ offset_bottom = 356.0
 text = "Add screen shake when the platfor is rising out of the sand/water"
 
 [node name="Sign Text4" parent="Folder_Ideas" instance=ExtResource("5_3va0q")]
+visible = false
 offset_left = 1174.0
 offset_top = 299.0
 offset_right = 1262.0
@@ -1102,16 +1220,16 @@ offset_bottom = 387.0
 text = "Have a second layer of water to make it more visualy interesting"
 
 [node name="Sign Text5" parent="Folder_Ideas" instance=ExtResource("5_3va0q")]
+visible = false
 offset_left = 645.0
 offset_top = 61.0
 offset_right = 907.0
 offset_bottom = 377.0
 text = "Things to Fix/Add
 
-Astetic Changes to levels
- - in levle 3 make it so the cave part has a cave background - because im not sure if I want it or not, make it as another backgroun layer just to test
+Add a script to each camera to scale its zoom based on resolution/screen size
 
-Add a script to each camera to scale its zoom based on resolution/screen size"
+Yes, Im aware that if you are on a moving platform and you pause the game it all freaks out. I dont know why, and frankly am so done with this. Im proud of what I did, and am ready to publish it."
 
 [node name="ButtonANDBlocks" type="Node" parent="."]
 

@@ -1851,6 +1851,9 @@ _data = {
 [node name="HomePage" type="Node2D"]
 script = ExtResource("1_70r2j")
 
+[node name="PositionTester" type="Node2D" parent="."]
+position = Vector2(0, -142)
+
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(8, 8)
 tile_set = SubResource("TileSet_i0r8o")

@@ -1,6 +1,5 @@
 extends Control
 
-#@onready var player = %Player
 
 var paused = false
 @onready var star_1 = %Star_1
