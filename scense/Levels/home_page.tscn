@@ -2073,28 +2073,6 @@ text = "Credits
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Settings_Button" type="Button" parent="Folder_UI"]
-visible = false
-offset_left = -133.0
-offset_top = 6.0
-offset_right = -64.0
-offset_bottom = 33.0
-theme_override_fonts/font = ExtResource("10_vb1hm")
-theme_override_font_sizes/font_size = 12
-
-[node name="Label2" type="Label" parent="Folder_UI/Settings_Button"]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 8.0
-offset_right = 53.0
-offset_bottom = 16.0
-scale = Vector2(1.3, 1.3)
-theme_override_fonts/font = ExtResource("10_vb1hm")
-theme_override_font_sizes/font_size = 8
-text = "Settings"
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="Level_Select" type="Node2D" parent="Folder_UI"]
 position = Vector2(384, -4)
 
@@ -2444,10 +2422,6 @@ text = "Main Menu
 "
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Settings_Menu" type="Node2D" parent="Folder_UI"]
-visible = false
-position = Vector2(0, 216)
 
 [connection signal="pressed" from="Folder_UI/Home_Screen/Play_Button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Folder_UI/Home_Screen/Quit_Button" to="." method="_on_quit_button_pressed"]

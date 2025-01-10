@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 Music="*res://scense/music.tscn"
 LevelComplitionTracker="*res://scense/Levels/level_complition_tracker.tscn"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [input]
 
 jump={
